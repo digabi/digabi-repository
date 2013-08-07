@@ -4,5 +4,4 @@ Codename: wheezy
 Architectures: i386
 Components: main contrib non-free
 Description: Apt repository for Digabi
-#SignWith: 0x9D3D06EE
-SignWith: 0xF03E2D4A
+SignWith: 0x9D3D06EE

@@ -1,7 +1,8 @@
 Origin: Digabi
 Label: Digabi
-Codename: wheezy
-Architectures: i386
+Codename: jessie
+Architectures: i386 amd64
 Components: main contrib non-free
-Description: Apt repository for Digabi
+Description: APT repository for Digabi
 SignWith: 0x9D3D06EE
+#SignWith: 0xF03E2D4A

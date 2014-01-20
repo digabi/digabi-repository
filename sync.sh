@@ -4,6 +4,9 @@
 # (c) 2014 Ylioppilastutkintolautakunta
 # Author: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
 
+# Note: You MUST define REPOSITORY_TARGET in your ~/.digabirc
+# Format: username@host:/target/path
+
 if [ -f "${HOME}/.digabirc" ]
 then
     . "${HOME}/.digabirc"
@@ -18,7 +21,9 @@ then
     exit 1
 fi
 
+RSYNC="/usr/bin/rsync"
+RSYNC_FLAGS="-avh"
 SOURCE="./www"
 TARGET="${REPOSITORY_TARGET}"
 
-echo rsync -avh "${SOURCE}" "${REPOSITORY_TARGET}"
+${RSYNC} ${RSYNC_FLAGS} "${SOURCE}" "${REPOSITORY_TARGET}"

@@ -1,5 +1,11 @@
-digabi-repository (1.0) UNRELEASED; urgency=low
+digabi-repository (1.1) UNRELEASED; urgency=low
+
+  * Fixed path for sources.list.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Mon, 20 Jan 2014 19:40:02 +0200
+
+digabi-repository (1.0) unstable; urgency=low
 
   * Initial release.
 
- -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Mon, 20 Jan 2014 16:05:25 +0200
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Mon, 20 Jan 2014 19:40:00 +0200

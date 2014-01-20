@@ -8,6 +8,6 @@ Package: digabi-repository
 Maintainer: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
 Changelog: debian/changelog
 Files: digabi.gpg /etc/apt/trusted.gpg.d
- digabi.list /etc/apt/sources.list.d/digabi.list
+ digabi.list /etc/apt/sources.list.d
 Description: Installs Digabi APT repository.
  This package includes sources.list and GPG key for Digabi repository.

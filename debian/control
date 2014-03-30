@@ -6,6 +6,7 @@ Standards-Version: 3.9.2
 
 Package: digabi-repository
 Maintainer: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
+Depends: apt-transport-https
 Changelog: debian/changelog
 Files: digabi.gpg /etc/apt/trusted.gpg.d
  digabi.list /etc/apt/sources.list.d

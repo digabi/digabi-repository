@@ -1,8 +1,28 @@
-Origin: Digabi
-Label: Digabi
-Codename: jessie
+# this will move to testing in 2015
+Origin: Digabi OS Repository
+Label: Digabi OS
+Codename: zurg
+Suite: next-testing
 Architectures: i386 amd64
 Components: main contrib non-free
-Description: APT repository for Digabi
+Description: APT repository for Digabi OS <https://digabi.fi/os>
 SignWith: 0x9D3D06EE
-#SignWith: 0xF03E2D4A
+
+# this will become stable in 2015
+Origin: Digabi OS Repository
+Label: Digabi OS
+Codename: jessie
+Suite: testing
+Architectures: i386 amd64
+Components: main contrib non-free
+Description: APT repository for Digabi OS <https://digabi.fi/os>
+SignWith: 0x9D3D06EE
+
+Origin: Digabi OS Repository
+Label: Digabi OS
+Codename: sid
+Suite: unstable
+Architectures: i386 amd64
+Components: main contrib non-free
+Description: APT repository for Digabi OS <https://digabi.fi/os>
+SignWith: 0x9D3D06EE

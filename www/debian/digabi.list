@@ -1,0 +1,6 @@
+# Digabi APT repository
+# <https://digabi.fi/os>
+
+#deb https://digabi.fi/debian stable main contrib non-free
+deb https://digabi.fi/debian testing main contrib non-free
+#deb https://digabi.fi/debian unstable main contrib non-free

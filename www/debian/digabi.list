@@ -1,5 +1,8 @@
 # Digabi APT repository
 # <https://digabi.fi/os>
+#
+# wget -O /etc/apt/sources.list.d/digabi.list https://digabi.fi/debian/digabi.list
+# wget -O - https://digabi.fi/debian/digabi.asc |sudo apt-key add -
 
 #deb https://digabi.fi/debian stable main contrib non-free
 deb https://digabi.fi/debian testing main contrib non-free

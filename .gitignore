@@ -1,4 +1,5 @@
 *~
 *.deb
 db
-www/debian
+www/debian/dists
+www/debian/pool

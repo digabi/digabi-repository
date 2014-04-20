@@ -11,6 +11,7 @@ This repository includes:
 ## Add package to repository
 
     reprepro includedeb jessie mypackage_1.0_all.deb
+    reprepro -C non-free includedeb jessie mynonfree_1.0_all.deb
 
 
 ## Remove package from repository

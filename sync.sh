@@ -4,26 +4,23 @@
 # (c) 2014 Ylioppilastutkintolautakunta
 # Author: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
 
-# Note: You MUST define REPOSITORY_TARGET in your ~/.digabirc
-# Format: username@host:/target/path
-
 RSYNC="/usr/bin/rsync"
-RSYNC_FLAGS="-avh"
-SOURCE="./www"
+RSYNC_FLAGS="-avz"
+SOURCE="./www/debian/"
 
-if [ -f "${HOME}/.digabirc" ]
+if [ -z "${REPOSITORY_SYNC_USER}" ]
 then
-    . "${HOME}/.digabirc"
-else
-    echo "E: File ~/.digabirc not found, exiting..."
-    exit 1
+    REPOSITORY_SYNC_USER="reposync"
 fi
 
-if [ -z "${REPOSITORY_TARGET}" ]
+if [ -z "${REPOSITORY_SYNC_HOST}" ]
 then
-    echo "E: \$REPOSITORY_TARGET not specified in ~/.digabirc, exiting..."
-    exit 1
+    REPOSITORY_SYNC_HOST="digabi.fi"
 fi
 
+if [ -z "${REPOSITORY_PATH}" ]
+then
+    REPOSITORY_PATH="/srv/digabi-repository/"
+fi
 
-${RSYNC} ${RSYNC_FLAGS} "${SOURCE}" "${REPOSITORY_TARGET}"
+${RSYNC} ${RSYNC_FLAGS} "${SOURCE}" "${REPOSITORY_SYNC_USER}@${REPOSITORY_SYNC_HOST}:${REPOSITORY_TARGET}"

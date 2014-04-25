@@ -3,18 +3,29 @@ Server Configuration
 
 ## Webserver
  - Apache 2.x
- - configured to serve `digabi-repository/www/debian` as `/debian/`, using non-HTTPS host
- - content ALSO server via HTTPS, primarily for publishing GPG key, see <https://digabi.fi/debian/>, but this is completely optional
+ - configured to serve repository at location `/debian/`, using non-HTTPS host
+ - content ALSO served via HTTPS, primarily for publishing GPG key, see <https://digabi.fi/debian/>, but this is completely optional
 
 ## Sync
  - using `rsync`
- - `digabi-repository/www/debian` symlinked to `/srv/digabi-repository`
+ - full path to `/debian/` is `/srv/digabi-repository/debian/`
 
 ### User
  - created user `reposync`
- - owns the directory `digabi-repository/www/debian` (files: `chmod 0644`, directories: `chmod 0755`)
  - password disabled, login only with SSH keys (`passwd -d reposync`)
  - owns logfile `/var/log/digabi-repository.log`
+
+
+    adduser --shell /bin/false --gecos "Digabi Repository Sync" --disabled-password reposync
+
+    mkdir /srv/digabi-repository
+    chown root:reposync /srv/digabi-repository
+    chmod 0775 /srv/digabi-repository
+
+    touch /var/log/digabi-repository.log
+    chown root:reposync /var/log/digabi-repository.log
+    chmod 0664 /var/log/digabi-repository.log
+
 
 #### ~/.ssh/authorized_keys
 We like to restrict user access, so adding IP limitation + allowing only `rsync`.

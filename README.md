@@ -22,6 +22,10 @@ This repository includes:
 
     reprepro list jessie    
 
+## Sync repository from server
+
+    ./sync.sh from-server
+
 ## Sync repository to server
 
-    ./sync.sh
+    ./sync.sh to-server

@@ -44,7 +44,7 @@ Server Configuration
     chown root:reposync /var/log/digabi-repository.log
     chmod 0664 /var/log/digabi-repository.log
 
-### Create user syncable directories
+#### Create user syncable directories
 We like to minimize content that sync user is able to modify.
 
     mkdir -p /srv/digabi-repository/db

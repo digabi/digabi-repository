@@ -1,4 +1,31 @@
-# this will move to testing in 2015
+#
+# reprepro config for Digabi repository
+#
+
+# Suites:
+# - jessie, testing
+#   base version for DOS until 12/2016
+#   will move to stable in Spring 2015
+# - zurg, next-testing
+#   base version for DOS after 12/2016
+#   will move to testing in Spring 2015
+# - sid, unstable
+#   for testing misc stuff, that might migrate to testing
+#
+# After jessie moves to stable, and zurg to testing, there will be no 
+# new next-testing in Digabi repository
+
+Origin: Digabi OS Repository
+Label: Digabi OS
+Codename: jessie
+Suite: testing
+Architectures: i386 amd64
+Components: main contrib non-free
+Description: APT repository for Digabi OS <https://digabi.fi/os>
+SignWith: 0x9D3D06EE
+
+
+
 Origin: Digabi OS Repository
 Label: Digabi OS
 Codename: zurg
@@ -8,15 +35,7 @@ Components: main contrib non-free
 Description: APT repository for Digabi OS <https://digabi.fi/os>
 SignWith: 0x9D3D06EE
 
-# this will become stable in 2015
-Origin: Digabi OS Repository
-Label: Digabi OS
-Codename: jessie
-Suite: testing
-Architectures: i386 amd64
-Components: main contrib non-free
-Description: APT repository for Digabi OS <https://digabi.fi/os>
-SignWith: 0x9D3D06EE
+
 
 Origin: Digabi OS Repository
 Label: Digabi OS

@@ -8,24 +8,41 @@ Server Configuration
 
 ## Sync
  - using `rsync`
- - full path to `/debian/` is `/srv/digabi-repository/debian/`
+ - full path to `/debian/` is `/srv/digabi-repository/www/debian/`
+ 
+### Create filesystem structure
+
+    mkdir /srv/digabi-repository
+    cd /srv/digabi-repository
+    git clone git://github.com/digabi/digabi-repository.git .
+    
 
 ### User
  - created user `reposync`
  - password disabled, login only with SSH keys (`passwd -d reposync`)
  - owns logfile `/var/log/digabi-repository.log`
 
+#### Create user
 
     adduser --shell /bin/false --gecos "Digabi Repository Sync" --disabled-password reposync
 
-    mkdir /srv/digabi-repository
-    chown root:reposync /srv/digabi-repository
-    chmod 0775 /srv/digabi-repository
+#### Create logfiles for user 
 
     touch /var/log/digabi-repository.log
     chown root:reposync /var/log/digabi-repository.log
     chmod 0664 /var/log/digabi-repository.log
 
+### Create user syncable directories
+We like to minimize content that sync user is able to modify.
+
+    mkdir -p /srv/digabi-repository/db
+    mkdir -p /srv/digabi-repository/www/debian/dists
+    mkdir -p /srv/digabi-repository/www/debian/pool
+    
+    chown -R reposync:reposync /srv/digabi-repository/db \
+     /srv/digabi-repository/www/debian/dists \
+     /srv/digabi-repository/www/debian/pool
+    
 
 #### ~/.ssh/authorized_keys
 We like to restrict user access, so adding IP limitation + allowing only `rsync`.

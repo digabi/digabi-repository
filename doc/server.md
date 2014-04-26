@@ -6,6 +6,18 @@ Server Configuration
  - configured to serve repository at location `/debian/`, using non-HTTPS host
  - content ALSO served via HTTPS, primarily for publishing GPG key, see <https://digabi.fi/debian/>, but this is completely optional
 
+### Config
+
+    Alias /debian /srv/digabi-repository/www/debian
+    <Directory /srv/digabi-repository/www>
+        Options +Indexes +FollowSymLinks
+        AllowOverride None
+        
+        Order Allow,Deny
+        Allow from all
+    </Directory>
+
+
 ## Sync
  - using `rsync`
  - full path to `/debian/` is `/srv/digabi-repository/www/debian/`

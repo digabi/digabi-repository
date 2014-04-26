@@ -24,8 +24,8 @@ This repository includes:
 
 ## Sync repository from server
 
-    ./sync.sh from-server
+    ./tools/sync from-server
 
 ## Sync repository to server
 
-    ./sync.sh to-server
+    ./tools/sync to-server

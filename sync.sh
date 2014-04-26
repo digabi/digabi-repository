@@ -5,22 +5,42 @@
 # Author: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
 
 RSYNC="/usr/bin/rsync"
-RSYNC_FLAGS="-avz"
-SOURCE="./www/debian/"
+RSYNC_FLAGS="-aqz --progress"
+RSYNC_USER="reposync"
+RSYNC_HOST="digabi.fi"
+RSYNC_PATH="repository/"
 
-if [ -z "${REPOSITORY_SYNC_USER}" ]
+SYNC_DIRS="./db/ ./www/debian/pool/ ./www/debian/dists/"
+
+DIRECTION="$1"
+
+usage() {
+    echo "usage: $0 <from-server|to-server>"
+}
+
+if [ -z "${DIRECTION}" ]
 then
-    REPOSITORY_SYNC_USER="reposync"
+    usage
+    exit 1
 fi
 
-if [ -z "${REPOSITORY_SYNC_HOST}" ]
+if [ "${DIRECTION}" != "from-server" ] && [ "${DIRECTION}" != "to-server" ]
 then
-    REPOSITORY_SYNC_HOST="digabi.fi"
+    echo "Invalid direction: ${DIRECTION}"
+    usage
+    exit 1
 fi
 
-if [ -z "${REPOSITORY_PATH}" ]
-then
-    REPOSITORY_PATH="/srv/digabi-repository/"
-fi
-
-${RSYNC} ${RSYNC_FLAGS} "${SOURCE}" "${REPOSITORY_SYNC_USER}@${REPOSITORY_SYNC_HOST}:${REPOSITORY_TARGET}"
+for source in ${SYNC_DIRS}
+do
+    TARGET="${RSYNC_USER}@${RSYNC_HOST}:${RSYNC_PATH}$(echo ${source} |sed 's/^\.\///g')"
+    if [ "${DIRECTION}" = "from-server" ]
+    then
+        # We should switch source <> target
+        _TARGET="${source}"
+        source="${TARGET}"
+        TARGET="${_TARGET}"
+    fi
+    echo "Syncing ${source} to ${TARGET}..."
+    ${RSYNC} ${RSYNC_FLAGS} "${source}" "${TARGET}"
+done

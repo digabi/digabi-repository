@@ -11,7 +11,5 @@
 #deb http://dev.digabi.fi/debian testing main contrib non-free
 #deb http://dev.digabi.fi/debian unstable main contrib non-free
 
-# TODO: Replace with dev.digabi.fi
-
-deb http://temporary-digabi-apt-repository-waiting-for-another-host.ypcs.fi/debian/ jessie main contrib non-free
+deb http://dev.digabi.fi/debian jessie main contrib non-free
 

@@ -3,7 +3,7 @@ How to update repository
 
 ## Requirements
  - your SSH key has been added to server `digabi.fi`
- - you have access to Digabi repository signing key (GPG), needed by `reprepro`
+ - you have access to Digabi repository signing key (GPG, `0x9D3D06EE`), needed by `reprepro` (ie. you have added private key to your GPG keyring)
  - `apt-get install reprepro equivs`
 
 

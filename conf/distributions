@@ -23,6 +23,7 @@ Architectures: i386 amd64
 Components: main contrib non-free
 Description: APT repository for Digabi OS <https://digabi.fi/os>
 Contents: percomponent
+Log: dos_repository_jessie.log
 SignWith: 0x9D3D06EE
 
 
@@ -35,6 +36,7 @@ Architectures: i386 amd64
 Components: main contrib non-free
 Description: APT repository for Digabi OS <https://digabi.fi/os>
 Contents: percomponent
+Log: dos_repository_zurg.log
 SignWith: 0x9D3D06EE
 
 
@@ -47,4 +49,5 @@ Architectures: i386 amd64
 Components: main contrib non-free
 Description: APT repository for Digabi OS <https://digabi.fi/os>
 Contents: percomponent
+Log: dos_repository_sid.log
 SignWith: 0x9D3D06EE

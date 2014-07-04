@@ -1,5 +1,6 @@
 *~
 *.deb
+*.exe
 db
 www/debian/dists
 www/debian/pool

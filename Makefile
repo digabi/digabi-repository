@@ -17,12 +17,13 @@ SYNC_TARGET = $(SYNC_USER)@$(SYNC_HOST):$(SYNC_PATH)
 
 
 SYNC_FLAGS = -aqs --progress
+REPO_FLAGS = --ignore=brokenversioncmp
 
 SYNC_CMD = /usr/bin/rsync
 REPO_CMD = /usr/bin/reprepro
 
 add-package:
-	$(REPO_CMD) -C $(COMPONENT) includedeb $(DISTRIBUTION) $(DEB)
+	$(REPO_CMD) $(REPO_FLAGS) -C $(COMPONENT) includedeb $(DISTRIBUTION) $(DEB) || echo -n
 
 sync-to-server:
 	$(SYNC_CMD) $(SYNC_FLAGS) ./db/ $(SYNC_TARGET)/db/

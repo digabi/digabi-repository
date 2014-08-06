@@ -35,3 +35,5 @@ sync-from-server:
 	$(SYNC_CMD) $(SYNC_FLAGS) $(SYNC_TARGET)/www/debian/dists/ ./www/debian/dists/
 	$(SYNC_CMD) $(SYNC_FLAGS) $(SYNC_TARGET)/db/ ./db/
 
+deb:
+	equivs-build debian/control

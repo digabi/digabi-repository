@@ -1,0 +1,11 @@
+Name: default
+Default: sid
+Allow: jessie>zurg>sid
+
+Options: multiple_distributions
+
+IncomingDir: incoming
+TempDir: incoming.temp
+MorgueDir: incoming.morgue
+LogDir: logs.incoming
+

@@ -3,7 +3,8 @@ Method: http://httpredir.debian.org/debian
 Components: main contrib non-free
 UDebComponents: main
 Architectures: i386 amd64 source
-VerifyRelease: YYYYY
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010
 
 Name: debian-jessie-updates
 Method: http://httpredir.debian.org/debian
@@ -11,18 +12,21 @@ Suite: jessie-updates
 Components: main contrib non-free
 UDebComponents: main
 Architectures: i386 amd64 source
-VerifyRelease: YYYYY
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010
 
 Name: debian-jessie-security
 Method: http://security.debian.org/
 Suite: jessie/updates
 Components: main contrib non-free
 Architectures: i386 amd64 source
-VerifyRelease: YYYYY
+#VerifyRelease: D21169141CECD440F2EB8DDA9D6D8F6BC857C906
+VerifyRelease: C857C906
 
 Name: debian-jessie-backports
 Method: http://httpredir.debian.org/debian/
 Suite: jessie-backports
 Components: main contrib non-free
 Architectures: i386 amd64 source
-VerifyRelease: YYYYY
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010

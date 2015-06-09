@@ -1,50 +1,38 @@
-#
-# reprepro config for Digabi repository
-#
-
-# Suites:
-# - jessie, stable
-#   base version for DOS until 12/2016
-# - stretch, testing
-#   base version for DOS after 12/2016
-# - buster, next-testing
-#   <https://lists.debian.org/debian-devel-announce/2014/11/msg00005.html>
-# - sid, unstable
-#   for testing misc stuff, that might migrate to testing
-
-Origin: Digabi OS Repository
-Label: Digabi OS
+Origin: Debian
 Codename: jessie
-Suite: stable
+Description: Debian 8 (jessie) mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
-Description: APT repository for Digabi OS <https://digabi.fi/os>
-Contents: percomponent
-Log: dos_repository_jessie.log
-SignWith: 0x9D3D06EE
+UDebComponents: main
+Update: - debian-jessie
+Log: mirror_debian-jessie.log
+SignWith: XXXX
 
-
-
-Origin: Digabi OS Repository
-Label: Digabi OS
-Codename: stretch
-Suite: testing
+Origin: Debian
+Codename: jessie-updates
+Description: Debian 8 (jessie) updates mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
-Description: APT repository for Digabi OS <https://digabi.fi/os>
-Contents: percomponent
-Log: dos_repository_stretch.log
-SignWith: 0x9D3D06EE
+UDebComponents: main
+Update: - debian-jessie-updates
+Log: mirror_debian-jessie-updates.log
+SignWith: XXXX
 
-
-
-Origin: Digabi OS Repository
-Label: Digabi OS
-Codename: sid
-Suite: unstable
+Origin: Debian
+Codename: jessie-security
+Description: Debian 8 (jessie) security mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
-Description: APT repository for Digabi OS <https://digabi.fi/os>
-Contents: percomponent
-Log: dos_repository_sid.log
-SignWith: 0x9D3D06EE
+#UDebComponents: main
+Update: - debian-jessie-security
+Log: mirror_debian-jessie-security.log
+SignWith: XXXX
+
+Origin: Debian
+Codename: jessie-backports
+Description: Debian 8 (jessie) backports mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Update: - debian-jessie-backports
+Log: mirror_debian-jessie-backports.log
+SignWith: XXXX

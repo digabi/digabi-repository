@@ -1,0 +1,50 @@
+#
+# reprepro config for Digabi repository
+#
+
+# Suites:
+# - jessie, stable
+#   base version for DOS until 12/2016
+# - stretch, testing
+#   base version for DOS after 12/2016
+# - buster, next-testing
+#   <https://lists.debian.org/debian-devel-announce/2014/11/msg00005.html>
+# - sid, unstable
+#   for testing misc stuff, that might migrate to testing
+
+Origin: Digabi OS Repository
+Label: Digabi OS
+Codename: jessie
+Suite: stable
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Description: APT repository for Digabi OS <https://digabi.fi/os>
+Contents: percomponent
+Log: dos_repository_jessie.log
+SignWith: 0x9D3D06EE
+
+
+
+Origin: Digabi OS Repository
+Label: Digabi OS
+Codename: stretch
+Suite: testing
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Description: APT repository for Digabi OS <https://digabi.fi/os>
+Contents: percomponent
+Log: dos_repository_stretch.log
+SignWith: 0x9D3D06EE
+
+
+
+Origin: Digabi OS Repository
+Label: Digabi OS
+Codename: sid
+Suite: unstable
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Description: APT repository for Digabi OS <https://digabi.fi/os>
+Contents: percomponent
+Log: dos_repository_sid.log
+SignWith: 0x9D3D06EE

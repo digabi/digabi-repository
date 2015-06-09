@@ -1,0 +1,38 @@
+Origin: Debian
+Codename: jessie
+Description: Debian 8 (jessie) mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+UDebComponents: main
+Update: - debian-jessie
+Log: mirror_debian-jessie.log
+SignWith: XXXX
+
+Origin: Debian
+Codename: jessie-updates
+Description: Debian 8 (jessie) updates mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+UDebComponents: main
+Update: - debian-jessie-updates
+Log: mirror_debian-jessie-updates.log
+SignWith: XXXX
+
+Origin: Debian
+Codename: jessie-security
+Description: Debian 8 (jessie) security mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+#UDebComponents: main
+Update: - debian-jessie-security
+Log: mirror_debian-jessie-security.log
+SignWith: XXXX
+
+Origin: Debian
+Codename: jessie-backports
+Description: Debian 8 (jessie) backports mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Update: - debian-jessie-backports
+Log: mirror_debian-jessie-backports.log
+SignWith: XXXX

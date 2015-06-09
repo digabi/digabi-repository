@@ -3,6 +3,11 @@ set -e
 
 COMMAND="$1"
 REPREPRO="/usr/bin/reprepro"
+REPREPRO_FLAGS=""
+if [ -n "${DEBUG}" ]
+then
+    REPREPRO_FLAGS="${REPREPRO_FLAGS} -V"
+fi
 
 if [ -z "${COMMAND}" ]
 then

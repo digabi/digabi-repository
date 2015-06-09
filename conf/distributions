@@ -1,3 +1,60 @@
+# Custom packages for DigabiOS, build system etc.
+Origin: Digabi
+Codename: digabi-stable
+Description: Custom packages
+Architectures: i386 amd64 source
+Log: repo_digabi-stable.log
+SignWith: XXXX
+
+Origin: Digabi
+Codename: digabi-testing
+Description: Custom packages
+Architectures: i386 amd64 source
+Log: repo_digabi-testing.log
+SignWith: XXXX
+
+Origin: Digabi
+Codename: digabi-unstable
+Description: Custom packages
+Architectures: i386 amd64 source
+Log: repo_digabi-unstable.log
+SignWith: XXXX
+
+# Abitti CBT
+Origin: Abitti
+Codename: abitti-stable
+Description: Custom packages
+Architectures: i386 amd64 source
+Log: repo_abitti-stable.log
+SignWith: XXXX
+
+Origin: Abitti
+Codename: abitti-testing
+Description: Custom packages
+Architectures: i386 amd64 source
+Log: repo_abitti-testing.log
+SignWith: XXXX
+
+Origin: Abitti
+Codename: abitti-unstable
+Description: Custom packages
+Architectures: i386 amd64 source
+Log: repo_abitti-unstable.log
+SignWith: XXXX
+
+#Origin: Debian
+#Codename: debian-stable
+
+#Origin: Debian
+#Codename: debian-testing
+
+#Origin: Debian
+#Codename: debian-unstable
+
+
+#
+# mirror Debian 8 (jessie), stable as of 04/2015
+#
 Origin: Debian
 Codename: jessie
 Description: Debian 8 (jessie) mirror
@@ -35,4 +92,72 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Update: - debian-jessie-backports
 Log: mirror_debian-jessie-backports.log
+SignWith: XXXX
+
+#
+# mirror Debian 9 (stretch), testing as of 04/2015
+#
+Origin: Debian
+Codename: stretch
+Description: Debian 9 (stretch) mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+UDebComponents: main
+Update: - debian-stretch
+Log: mirror_debian-stretch.log
+SignWith: XXXX
+
+Origin: Debian
+Codename: stretch-updates
+Description: Debian 9 (stretch) updates mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+UDebComponents: main
+Update: - debian-stretch-updates
+Log: mirror_debian-stretch-updates.log
+SignWith: XXXX
+
+Origin: Debian
+Codename: stretch-security
+Description: Debian 9 (stretch) security mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+#UDebComponents: main
+Update: - debian-stretch-security
+Log: mirror_debian-stretch-security.log
+SignWith: XXXX
+
+Origin: Debian
+Codename: stretch-backports
+Description: Debian 9 (stretch) backports mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Update: - debian-stretch-backports
+Log: mirror_debian-stretch-backports.log
+SignWith: XXXX
+
+#
+# mirror Debian unstable (sid)
+#
+Origin: Debian
+Codename: sid
+Description: Debian unstable (sid) mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+UDebComponents: main
+Update: - debian-sid
+Log: mirror_debian-sid.log
+SignWith: XXXX
+
+#
+# mirror Debian experimental (rc-buggy)
+#
+Origin: Debian
+Codename: rc-buggy
+Description: Debian experimental (rc-buggy) mirror
+Architectures: i386 amd64 source
+Components: main contrib non-free
+UDebComponents: main
+Update: - debian-experimental
+Log: mirror_debian-experimental.log
 SignWith: XXXX

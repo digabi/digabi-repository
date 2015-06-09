@@ -1,6 +1,6 @@
 Name: default
 Default: sid
-Allow: jessie>zurg>sid
+Allow: jessie>stretch>sid
 
 Options: multiple_distributions
 

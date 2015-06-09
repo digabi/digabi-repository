@@ -1,2 +1,3 @@
 ask-passphrase
 outdir ./www/debian
+gnupghome ./gpg

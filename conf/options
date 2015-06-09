@@ -1,3 +1,19 @@
 ask-passphrase
-outdir ./www/debian
+
+# Wait for 10 seconds * 6 times if lockfile exists
+waitforlock 6
+
+# Do not check free diskspace before downloads, assume that we have enough
+#spacecheck none
+
+# Show progress bar when downloading files
+show-percent
+
+# Configure paths
+outdir +b/www/debian
 gnupghome ./gpg
+logdir +b/logs
+dbdir +b/db
+listdir +b/lists
+morguedir +o/morgue
+

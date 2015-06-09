@@ -52,6 +52,16 @@ in
     receive-gpg-keys-for-upstreams)
         error "TODO"
     ;;
+    remove-lockfile)
+        info "Removing reprepro lockfile..."
+        PID="$(pidof reprepro)"
+        if [ -z "${PID}" ]
+        then
+            rm -f db/lockfile
+        else
+            error "Reprepro running, not removing lockfile!"
+        fi
+    ;;
     *)
         error "Unknown command '${COMMAND}'!"
         exit 1

@@ -40,6 +40,9 @@ in
         info "Updating mirrors..."
         ${REPREPRO} -V update
     ;;
+    receive-gpg-keys-for-upstreams)
+        error "TODO"
+    ;;
     *)
         error "Unknown command '${COMMAND}'!"
         exit 1

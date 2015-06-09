@@ -53,7 +53,7 @@ in
         error "TODO"
     ;;
     remove-lockfile)
-        PID="$(pidof reprepro)"
+        PID="$(pidof reprepro || true)"
         if [ -z "${PID}" ]
         then
             info "Removing reprepro lockfile..."

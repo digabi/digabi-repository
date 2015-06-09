@@ -36,6 +36,10 @@ debug "Running command '${COMMAND}'..."
 
 case "${COMMAND}"
 in
+    do-nothing)
+        info "Doing nothing."
+        info "TODO: In future, run automatic management tasks: update packages etc."
+    ;;
     update-mirrors)
         info "Updating mirrors..."
         ${REPREPRO} -V update

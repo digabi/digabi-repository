@@ -1,5 +1,6 @@
 Name: debian-jessie
 Method: http://httpredir.debian.org/debian
+Suite: jessie
 Components: main contrib non-free
 UDebComponents: main
 Architectures: i386 amd64 source
@@ -30,3 +31,72 @@ Components: main contrib non-free
 Architectures: i386 amd64 source
 #VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
 VerifyRelease: 2B90D010
+
+Name: debian-stretch
+Method: http://httpredir.debian.org/debian
+Suite: stretch
+Components: main contrib non-free
+UDebComponents: main
+Architectures: i386 amd64 source
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010
+
+Name: debian-stretch-updates
+Method: http://httpredir.debian.org/debian
+Suite: stretch-updates
+Components: main contrib non-free
+UDebComponents: main
+Architectures: i386 amd64 source
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010
+
+Name: debian-stretch-security
+Method: http://security.debian.org/
+Suite: stretch/updates
+Components: main contrib non-free
+Architectures: i386 amd64 source
+#VerifyRelease: D21169141CECD440F2EB8DDA9D6D8F6BC857C906
+VerifyRelease: C857C906
+
+Name: debian-stretch-backports
+Method: http://httpredir.debian.org/debian/
+Suite: stretch-backports
+Components: main contrib non-free
+Architectures: i386 amd64 source
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010
+
+Name: debian-sid
+Method: http://httpredir.debian.org/debian
+Suite: sid
+Components: main contrib non-free
+UDebComponents: main
+Architectures: i386 amd64 source
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010
+
+Name: debian-sid-updates
+Method: http://httpredir.debian.org/debian
+Suite: sid-updates
+Components: main contrib non-free
+UDebComponents: main
+Architectures: i386 amd64 source
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010
+
+Name: debian-sid-security
+Method: http://security.debian.org/
+Suite: sid/updates
+Components: main contrib non-free
+Architectures: i386 amd64 source
+#VerifyRelease: D21169141CECD440F2EB8DDA9D6D8F6BC857C906
+VerifyRelease: C857C906
+
+Name: debian-sid-backports
+Method: http://httpredir.debian.org/debian/
+Suite: sid-backports
+Components: main contrib non-free
+Architectures: i386 amd64 source
+#VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
+VerifyRelease: 2B90D010
+

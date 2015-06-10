@@ -1,17 +1,23 @@
-SOURCES_LIST = digabi.list
-APT_KEY = digabi.gpg
+NAME = digabi
+
+SOURCES_LIST = $(NAME).list
+APT_KEY = $(NAME).gpg
+APT_KEY_ASCII = $(NAME).asc
 KEYID ?= 0x9D3D06EE
 
 all:
 
 clean:
-	rm -f $(APT_KEY) $(SOURCES_LIST)
+	rm -f $(APT_KEY) $(APT_KEY_ASCII) $(SOURCES_LIST)
 
 $(SOURCES_LIST):
-	cp data/repository/digabi.list $(SOURCES_LIST)
+	cp data/repository/$(NAME).list $(SOURCES_LIST)
 
 $(APT_KEY):
 	gpg --keyring data/gpg/pubring.gpg --no-default-keyring --export $(KEYID) >$(APT_KEY)
+	gpg -a --keyring data/gpg/pubring.gpg --no-default-keyring --export $(KEYID) >$(APT_KEY_ASCII)
+
+$(APT_KEY_ASCII): $(APT_KEY)
 
 install: $(SOURCES_LIST) $(APT_KEY)
 	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)

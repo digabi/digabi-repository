@@ -34,6 +34,8 @@ error() {
 ####
 
 # TODO: Receive GPG signing keys in conf/updates
+# TODO: Parse options using getopts, add support for -s, -t (source and target repositories)
+# TODO: Add support for listing packages $@
 
 ####
 

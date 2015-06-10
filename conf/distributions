@@ -112,7 +112,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_thirdparty-stable.log
 SignWith: 0x9D3D06EE
-
+Pull: migrate-geogebra
 
 #
 # mirror Debian 8 (jessie), stable as of 04/2015

@@ -40,13 +40,45 @@ error() {
 
 ####
 
+debug "Arguments: $@"
 debug "Running command '${COMMAND}'..."
+
+## Parse options
+while getopts s:t:c: o
+do
+    case "$o"
+    in
+        c)
+            COMPONENT="${OPTARG}"
+            debug "Component: ${COMPONENT}"
+        ;;
+        s)
+            SOURCE="${OPTARG}"
+            debug "Source: ${SOURCE}"
+        ;;
+        t)
+            TARGET="${OPTARG}"
+            debug "Target: ${TARGET}"
+        ;;
+        *)
+            debug "Argument: ${o}"
+            error "Invalid option(s)! $o"
+            exit 1
+        ;;
+    esac
+done
+
+##
+
 
 case "${COMMAND}"
 in
     init)
         info "Initializing..."
         ${REPREPRO} export
+    ;;
+    import-package)
+        PACKAGES="$@"
     ;;
     do-nothing)
         info "Doing nothing."

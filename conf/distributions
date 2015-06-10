@@ -3,6 +3,7 @@ Origin: Digabi
 Codename: digabi-stable
 Description: Custom packages
 Architectures: i386 amd64 source
+Components: main contrib non-free
 Log: repo_digabi-stable.log
 SignWith: XXXX
 
@@ -10,6 +11,7 @@ Origin: Digabi
 Codename: digabi-testing
 Description: Custom packages
 Architectures: i386 amd64 source
+Components: main contrib non-free
 Log: repo_digabi-testing.log
 SignWith: XXXX
 
@@ -17,6 +19,7 @@ Origin: Digabi
 Codename: digabi-unstable
 Description: Custom packages
 Architectures: i386 amd64 source
+Components: main contrib non-free
 Log: repo_digabi-unstable.log
 SignWith: XXXX
 
@@ -25,6 +28,7 @@ Origin: Abitti
 Codename: abitti-stable
 Description: Custom packages
 Architectures: i386 amd64 source
+Components: main contrib non-free
 Log: repo_abitti-stable.log
 SignWith: XXXX
 
@@ -32,6 +36,7 @@ Origin: Abitti
 Codename: abitti-testing
 Description: Custom packages
 Architectures: i386 amd64 source
+Components: main contrib non-free
 Log: repo_abitti-testing.log
 SignWith: XXXX
 
@@ -39,6 +44,7 @@ Origin: Abitti
 Codename: abitti-unstable
 Description: Custom packages
 Architectures: i386 amd64 source
+Components: main contrib non-free
 Log: repo_abitti-unstable.log
 SignWith: XXXX
 

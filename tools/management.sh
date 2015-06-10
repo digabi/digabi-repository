@@ -48,6 +48,10 @@ in
         info "Doing nothing."
         info "TODO: In future, run automatic management tasks: update packages etc."
     ;;
+    export)
+        info "Exporting..."
+        ${REPREPRO} export
+    ;;
     repo-maintenance)
         info "Clearing vanished distributions..."
         ${REPREPRO} clearvanished

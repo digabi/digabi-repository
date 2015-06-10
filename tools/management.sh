@@ -47,6 +47,10 @@ in
         info "Doing nothing."
         info "TODO: In future, run automatic management tasks: update packages etc."
     ;;
+    repo-maintenance)
+        info "Clearing vanished distributions..."
+        ${REPREPRO} clearvanished
+    ;;
     update-mirrors)
         info "Updating mirrors..."
         ${REPREPRO} -V update

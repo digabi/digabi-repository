@@ -84,6 +84,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_debian-stable.log
 SignWith: 0x9D3D06EE
+Pull: migrate-debian migrate-debian-updates migrate-debian-security
 
 
 #

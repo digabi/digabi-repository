@@ -54,7 +54,7 @@ in
     ;;
     update-mirrors)
         info "Updating mirrors..."
-        ${REPREPRO} -V update
+        ${REPREPRO} update
     ;;
     receive-gpg-keys-for-upstreams)
         error "TODO"

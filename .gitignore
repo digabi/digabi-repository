@@ -4,6 +4,7 @@
 db
 www/debian/dists
 www/debian/pool
+www/debian/morgue
 logs
 tmp
 lists

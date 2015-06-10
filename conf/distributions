@@ -84,7 +84,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_debian-unstable.log
 SignWith: 0x9D3D06EE
-Pull: migrate-debian-jessie migrate-debian-jessie-updates migrate-debian-jessie-security
+Pull: migrate-debian-jessie migrate-debian-jessie-updates migrate-debian-jessie-security migrate-debian-stretch migrate-debian-stretch-security
 
 #
 # Third party repositories

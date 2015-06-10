@@ -17,3 +17,6 @@ Initialize package cache.
 
     ./tools/management.sh update-mirrors
 
+
+## Selecting packages
+Configuration for packages that get pulled from upstream repos is located at `conf/packages/` files. Files are named after the update/pull they're for.

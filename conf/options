@@ -10,10 +10,10 @@ waitforlock 3
 show-percent
 
 # Configure paths
-outdir +b/www/debian
-gnupghome ./gpg
-logdir +b/logs
-dbdir +b/db
-listdir +b/lists
+outdir +b/data/repository
+gnupghome +b/data/gpg
+logdir +b/data/logs
+dbdir +b/data/db
+listdir +b/data/lists
 morguedir +o/morgue
 

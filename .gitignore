@@ -8,5 +8,3 @@ www/debian/morgue
 logs
 tmp
 lists
-gpg/secring.gpg
-gpg/trustdb.gpg

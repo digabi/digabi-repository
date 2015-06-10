@@ -1,3 +1,6 @@
 repository
 db
 lists
+logs
+gpg/secring.gpg
+gpg/trustdb.gpg

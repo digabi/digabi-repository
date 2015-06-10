@@ -1,4 +1,7 @@
+#
 # Custom packages for DigabiOS, build system etc.
+#
+
 Origin: Digabi
 Codename: digabi-stable
 Description: Custom packages
@@ -23,7 +26,10 @@ Components: main contrib non-free
 Log: repo_digabi-unstable.log
 SignWith: XXXX
 
+#
 # Abitti CBT
+#
+
 Origin: Abitti
 Codename: abitti-stable
 Description: Custom packages
@@ -48,19 +54,39 @@ Components: main contrib non-free
 Log: repo_abitti-unstable.log
 SignWith: XXXX
 
-#Origin: Debian
-#Codename: debian-stable
+#
+# Our custom Debian distribution repository,
+# created from 1-N Debian upstream distributions
+#
+Origin: Debian
+Codename: debian-stable
+Description: Custom Debian archive
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Log: repo_debian-stable.log
+SignWith: XXX
 
-#Origin: Debian
-#Codename: debian-testing
+Origin: Debian
+Codename: debian-testing
+Description: Custom Debian archive
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Log: repo_debian-stable.log
+SignWith: XXX
 
-#Origin: Debian
-#Codename: debian-unstable
+Origin: Debian
+Codename: debian-unstable
+Description: Custom Debian archive
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Log: repo_debian-stable.log
+SignWith: XXX
 
 
 #
 # mirror Debian 8 (jessie), stable as of 04/2015
 #
+
 Origin: Debian
 Codename: jessie
 Description: Debian 8 (jessie) mirror
@@ -103,6 +129,7 @@ SignWith: XXXX
 #
 # mirror Debian 9 (stretch), testing as of 04/2015
 #
+
 Origin: Debian
 Codename: stretch
 Description: Debian 9 (stretch) mirror
@@ -145,6 +172,7 @@ SignWith: XXXX
 #
 # mirror Debian unstable (sid)
 #
+
 Origin: Debian
 Codename: sid
 Description: Debian unstable (sid) mirror
@@ -158,6 +186,7 @@ SignWith: XXXX
 #
 # mirror Debian experimental (rc-buggy)
 #
+
 Origin: Debian
 Codename: rc-buggy
 Description: Debian experimental (rc-buggy) mirror

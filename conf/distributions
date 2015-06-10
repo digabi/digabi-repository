@@ -113,34 +113,34 @@ Update: - debian-stretch
 Log: mirror_debian-stretch.log
 SignWith: XXXX
 
-Origin: Debian
-Codename: stretch-updates
-Description: Debian 9 (stretch) updates mirror
-Architectures: i386 amd64 source
-Components: main contrib non-free
-UDebComponents: main
-Update: - debian-stretch-updates
-Log: mirror_debian-stretch-updates.log
-SignWith: XXXX
-
-Origin: Debian
-Codename: stretch-security
-Description: Debian 9 (stretch) security mirror
-Architectures: i386 amd64 source
-Components: main contrib non-free
+#Origin: Debian
+#Codename: stretch-updates
+#Description: Debian 9 (stretch) updates mirror
+#Architectures: i386 amd64 source
+#Components: main contrib non-free
 #UDebComponents: main
-Update: - debian-stretch-security
-Log: mirror_debian-stretch-security.log
-SignWith: XXXX
-
-Origin: Debian
-Codename: stretch-backports
-Description: Debian 9 (stretch) backports mirror
-Architectures: i386 amd64 source
-Components: main contrib non-free
-Update: - debian-stretch-backports
-Log: mirror_debian-stretch-backports.log
-SignWith: XXXX
+#Update: - debian-stretch-updates
+#Log: mirror_debian-stretch-updates.log
+#SignWith: XXXX
+#
+#Origin: Debian
+#Codename: stretch-security
+#Description: Debian 9 (stretch) security mirror
+#Architectures: i386 amd64 source
+#Components: main contrib non-free
+##UDebComponents: main
+#Update: - debian-stretch-security
+#Log: mirror_debian-stretch-security.log
+#SignWith: XXXX
+#
+#Origin: Debian
+#Codename: stretch-backports
+#Description: Debian 9 (stretch) backports mirror
+#Architectures: i386 amd64 source
+#Components: main contrib non-free
+#Update: - debian-stretch-backports
+#Log: mirror_debian-stretch-backports.log
+#SignWith: XXXX
 
 #
 # mirror Debian unstable (sid)

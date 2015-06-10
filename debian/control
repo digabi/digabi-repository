@@ -7,8 +7,20 @@ Standards-Version: 3.9.6
 Homepage: https://github.com/digabi/digabi-repository
 Vcs-Git: https://github.com/digabi/digabi-repository.git
 
-Package: digabi-repository
+Package: digabi-archive
+Replaces: digabi-repository
+Provides: digabi-repository
+Conflicts: digabi-repository
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, digabi-archive-keyring
 Description: Installs Digabi APT repository.
  This package installs Digabi APT repository to your system.
+
+Package: digabi-certificates
+Architecture: any
+Description: Install Digabi certificates into the system.
+
+Package: digabi-archive-keyring
+Architecture: any
+Description: Install Digabi APT archive keyring.
+

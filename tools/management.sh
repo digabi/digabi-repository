@@ -82,7 +82,7 @@ in
         ${REPREPRO} export
     ;;
     import-package)
-        info "Importing packages '${PACKAGES}' from '${SOURCE}' to '${TARGET}', component '${COMPONENT}'."
+        info "Importing package(s) '${PACKAGES}' from '${SOURCE}' to '${TARGET}', component '${COMPONENT}'."
     ;;
     do-nothing)
         info "Doing nothing."

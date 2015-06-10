@@ -5,7 +5,7 @@ KEYID ?= 0x9D3D06EE
 all:
 
 clean:
-	rm -f $(APT_KEY)
+	rm -f $(APT_KEY) $(SOURCES_LIST)
 
 $(SOURCES_LIST):
 	cp data/repository/digabi.list $(SOURCES_LIST)

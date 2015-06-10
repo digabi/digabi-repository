@@ -124,7 +124,7 @@ Description: Debian 8 (jessie) mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
 UDebComponents: main
-Update: - debian-jessie
+Update: debian-jessie
 Log: mirror_debian-jessie.log
 SignWith: 0x9D3D06EE
 
@@ -134,7 +134,7 @@ Description: Debian 8 (jessie) updates mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
 UDebComponents: main
-Update: - debian-jessie-updates
+Update: debian-jessie-updates
 Log: mirror_debian-jessie-updates.log
 SignWith: 0x9D3D06EE
 
@@ -144,7 +144,7 @@ Description: Debian 8 (jessie) security mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
 #UDebComponents: main
-Update: - debian-jessie-security
+Update: debian-jessie-security
 Log: mirror_debian-jessie-security.log
 SignWith: 0x9D3D06EE
 
@@ -153,7 +153,7 @@ Codename: jessie-backports
 Description: Debian 8 (jessie) backports mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
-Update: - debian-jessie-backports
+Update: debian-jessie-backports
 Log: mirror_debian-jessie-backports.log
 SignWith: 0x9D3D06EE
 
@@ -167,7 +167,7 @@ Description: Debian 9 (stretch) mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
 UDebComponents: main
-Update: - debian-stretch
+Update: debian-stretch
 Log: mirror_debian-stretch.log
 SignWith: 0x9D3D06EE
 
@@ -210,7 +210,7 @@ Description: Debian unstable (sid) mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
 UDebComponents: main
-Update: - debian-sid
+Update: debian-sid
 Log: mirror_debian-sid.log
 SignWith: 0x9D3D06EE
 
@@ -224,7 +224,7 @@ Description: Debian experimental (rc-buggy) mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
 UDebComponents: main
-Update: - debian-experimental
+Update: debian-experimental
 Log: mirror_debian-experimental.log
 SignWith: 0x9D3D06EE
 
@@ -236,6 +236,6 @@ Codename: geogebra-stable
 Description: Geogebra mirror
 Architectures: i386 amd64
 Components: main
-Update: - geogebra
+Update: geogebra
 Log: mirror_geogebra.log
 SignWith: 0x9D3D06EE

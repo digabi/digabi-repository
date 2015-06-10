@@ -47,10 +47,13 @@ debug "Arguments: $@"
 debug "Running command '${COMMAND}'..."
 
 ## Parse options
-while getopts s:t:c: o
+while getopts as:t:c: o
 do
     case "$o"
     in
+        a)
+            USE_UPSTREAM_ARTIFACTS="1"
+        ;;
         c)
             COMPONENT="${OPTARG}"
             debug "Component: ${COMPONENT}"
@@ -82,6 +85,10 @@ in
         ${REPREPRO} export
     ;;
     import-package)
+        if [ -n "${USE_UPSTREAM_ARTIFACTS}" ]
+        then
+            PACKAGES="upstream-artifacts"
+        fi
         info "Importing package(s) '${PACKAGES}' from '${SOURCE}' to '${TARGET}', component '${COMPONENT}'."
     ;;
     do-nothing)

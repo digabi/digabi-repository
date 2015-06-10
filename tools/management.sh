@@ -2,12 +2,13 @@
 set -e
 
 COMMAND="$1"
-REPREPRO="/usr/bin/reprepro"
+REPREPRO_BIN="/usr/bin/reprepro"
 REPREPRO_FLAGS=""
 if [ -n "${DEBUG}" ]
 then
     REPREPRO_FLAGS="${REPREPRO_FLAGS} -V"
 fi
+REPREPRO="${REPREPRO_BIN} ${REPREPRO_FLAGS}"
 
 if [ -z "${COMMAND}" ]
 then

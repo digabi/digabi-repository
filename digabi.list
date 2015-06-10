@@ -10,3 +10,11 @@
 deb http://dev.digabi.fi/debian debian-stable main contrib non-free
 deb http://dev.digabi.fi/debian digabi-stable main contrib non-free
 deb http://dev.digabi.fi/debian abitti-stable main contrib non-free
+
+#deb http://dev.digabi.fi/debian debian-testing main contrib non-free
+#deb http://dev.digabi.fi/debian digabi-testing main contrib non-free
+#deb http://dev.digabi.fi/debian abitti-testing main contrib non-free
+
+#deb http://dev.digabi.fi/debian debian-unstable main contrib non-free
+#deb http://dev.digabi.fi/debian digabi-unstable main contrib non-free
+#deb http://dev.digabi.fi/debian abitti-unstable main contrib non-free

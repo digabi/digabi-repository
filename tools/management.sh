@@ -4,6 +4,9 @@ set -e
 COMMAND="$1"
 REPREPRO_BIN="/usr/bin/reprepro"
 REPREPRO_FLAGS="-v"
+
+COMPONENT="main"
+
 if [ -n "${DEBUG}" ]
 then
     REPREPRO_FLAGS="${REPREPRO_FLAGS} -V"
@@ -67,6 +70,7 @@ do
         ;;
     esac
 done
+shift $(($OPTIND-1))
 PACKAGES="$@"
 ##
 
@@ -78,7 +82,7 @@ in
         ${REPREPRO} export
     ;;
     import-package)
-        info "Importing packages '${PACKAGES}' from ${SOURCE} to ${TARGET}, component ${COMPONENT}."
+        info "Importing packages '${PACKAGES}' from '${SOURCE}' to '${TARGET}', component '${COMPONENT}'."
     ;;
     do-nothing)
         info "Doing nothing."

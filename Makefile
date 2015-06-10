@@ -26,5 +26,8 @@ install: $(SOURCES_LIST) $(APT_KEY)
 	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)
 	install -D -m 0644 $(APT_KEY) $(DESTDIR)/etc/apt/trusted.gpg.d/$(APT_KEY)
 
+setup-server: $(SOURCES_LIST) $(APT_KEY) $(APT_KEY_ASCII)
+	
+
 deb:
 	debuild-pbuilder -us -uc -I

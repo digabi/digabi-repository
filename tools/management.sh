@@ -30,7 +30,7 @@ info() {
 }
 
 error() {
-    echo "E: $@"
+    echo "E: $@" 1>&2
 }
 ####
 

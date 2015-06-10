@@ -1,5 +1,8 @@
 NAME = digabi
 
+RELEASE ?= stable
+BASE_URL ?= http://dev.digabi.fi/debian
+
 SOURCES_LIST = $(NAME).list
 APT_KEY = $(NAME).gpg
 APT_KEY_ASCII = $(NAME).asc
@@ -11,11 +14,11 @@ clean:
 	rm -f $(APT_KEY) $(APT_KEY_ASCII) $(SOURCES_LIST)
 
 $(SOURCES_LIST):
-	cp data/repository/$(NAME).list $(SOURCES_LIST)
+	./tools/generate-sources-list.sh $(RELEASE) $(BASE_URL) >$(SOURCES_LIST)
 
 $(APT_KEY):
-	gpg --keyring data/gpg/pubring.gpg --no-default-keyring --export $(KEYID) >$(APT_KEY)
-	gpg -a --keyring data/gpg/pubring.gpg --no-default-keyring --export $(KEYID) >$(APT_KEY_ASCII)
+	gpg --keyring data/gpg/pubring.gpg --no-default-keyring --export $(KEYID) 2>/dev/null >$(APT_KEY)
+	gpg -a --keyring data/gpg/pubring.gpg --no-default-keyring --export $(KEYID) 2>/dev/null >$(APT_KEY_ASCII)
 
 $(APT_KEY_ASCII): $(APT_KEY)
 

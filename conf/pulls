@@ -1,19 +1,19 @@
 # Now defaults to Debian 8 (jessie)
 # When updating to newer distribution, s/jessie/newcodename/g
 
-Name: migrate-debian
+Name: migrate-debian-jessie
 From: jessie
 Components: main contrib non-free
 Architectures: i386 amd64 source
 UDebComponents: main contrib non-free
 
-Name: migrate-debian-updates
+Name: migrate-debian-jessie-updates
 From: jessie-updates
 Components: main contrib non-free
 Architectures: i386 amd64 source
 UDebComponents: main contrib non-free
 
-Name: migrate-debian-security
+Name: migrate-debian-jessie-security
 From: jessie-security
 Components: main
 Architectures: i386 amd64 source

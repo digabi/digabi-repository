@@ -84,3 +84,9 @@ Architectures: i386 amd64 source
 #VerifyRelease: 126C0D24BD8A2942CC7DF8AC7638D0442B90D010
 VerifyRelease: 2B90D010
 
+Name: geogebra
+Method: http://www.geogebra.net/linux/
+Suite: stable
+Components: main
+Architectures: i386 amd64
+VerifyRelease: 83A736CF

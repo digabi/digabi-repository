@@ -197,3 +197,14 @@ Update: - debian-experimental
 Log: mirror_debian-experimental.log
 SignWith: 9D3D06EE
 
+#
+# Geogebra
+#
+Origin: Geogebra
+Codename: stable
+Description: Geogebra mirror
+Architectures: i386 amd64
+Components: main
+Update: - geogebra
+Log: mirror_geogebra.log
+SignWith: 9D3D06EE

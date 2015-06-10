@@ -1,3 +1,10 @@
+digabi-repository (2.0) UNRELEASED; urgency=medium
+
+  * Update to "real" Debian packaging.
+  * Add staging support to repositories.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 10 Jun 2015 14:12:19 +0300
+
 digabi-repository (1.2) unstable; urgency=medium
 
   * Updated digabi.list.

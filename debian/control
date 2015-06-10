@@ -1,13 +1,14 @@
-# Source: <source package name; defaults to package name>
+Source: digabi-repository
 Section: misc
 Priority: optional
-Homepage: http://digabi.fi/
-Standards-Version: 3.9.2
+Maintainer: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+Homepage: https://github.com/digabi/digabi-repository
+Vcs-Git: https://github.com/digabi/digabi-repository.git
 
 Package: digabi-repository
-Maintainer: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
-Changelog: debian/changelog
-Files: digabi.gpg /etc/apt/trusted.gpg.d
- digabi.list /etc/apt/sources.list.d
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Installs Digabi APT repository.
- This package includes sources.list and GPG key for Digabi repository.
+ This package installs Digabi APT repository to your system.

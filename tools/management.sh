@@ -67,7 +67,7 @@ do
         ;;
     esac
 done
-
+PACKAGES="$@"
 ##
 
 
@@ -78,7 +78,7 @@ in
         ${REPREPRO} export
     ;;
     import-package)
-        PACKAGES="$@"
+        info "Importing packages '${PACKAGES}' from ${SOURCE} to ${TARGET}, component ${COMPONENT}."
     ;;
     do-nothing)
         info "Doing nothing."

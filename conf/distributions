@@ -8,7 +8,7 @@ Description: Custom packages
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_digabi-stable.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Digabi
 Codename: digabi-testing
@@ -16,7 +16,7 @@ Description: Custom packages
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_digabi-testing.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Digabi
 Codename: digabi-unstable
@@ -24,7 +24,7 @@ Description: Custom packages
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_digabi-unstable.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 #
 # Abitti CBT
@@ -36,7 +36,7 @@ Description: Custom packages
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_abitti-stable.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Abitti
 Codename: abitti-testing
@@ -44,7 +44,7 @@ Description: Custom packages
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_abitti-testing.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Abitti
 Codename: abitti-unstable
@@ -52,7 +52,7 @@ Description: Custom packages
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_abitti-unstable.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 #
 # Our custom Debian distribution repository,
@@ -64,7 +64,7 @@ Description: Custom Debian archive
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_debian-stable.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Debian
 Codename: debian-testing
@@ -72,7 +72,7 @@ Description: Custom Debian archive
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_debian-stable.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Debian
 Codename: debian-unstable
@@ -80,7 +80,7 @@ Description: Custom Debian archive
 Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_debian-stable.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 
 #
@@ -95,7 +95,7 @@ Components: main contrib non-free
 UDebComponents: main
 Update: - debian-jessie
 Log: mirror_debian-jessie.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Debian
 Codename: jessie-updates
@@ -105,7 +105,7 @@ Components: main contrib non-free
 UDebComponents: main
 Update: - debian-jessie-updates
 Log: mirror_debian-jessie-updates.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Debian
 Codename: jessie-security
@@ -115,7 +115,7 @@ Components: main contrib non-free
 #UDebComponents: main
 Update: - debian-jessie-security
 Log: mirror_debian-jessie-security.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 Origin: Debian
 Codename: jessie-backports
@@ -124,7 +124,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Update: - debian-jessie-backports
 Log: mirror_debian-jessie-backports.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 #
 # mirror Debian 9 (stretch), testing as of 04/2015
@@ -138,7 +138,7 @@ Components: main contrib non-free
 UDebComponents: main
 Update: - debian-stretch
 Log: mirror_debian-stretch.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 #Origin: Debian
 #Codename: stretch-updates
@@ -148,7 +148,7 @@ SignWith: 9D3D06EE
 #UDebComponents: main
 #Update: - debian-stretch-updates
 #Log: mirror_debian-stretch-updates.log
-#SignWith: 9D3D06EE
+#SignWith: 0x9D3D06EE
 #
 #Origin: Debian
 #Codename: stretch-security
@@ -158,7 +158,7 @@ SignWith: 9D3D06EE
 ##UDebComponents: main
 #Update: - debian-stretch-security
 #Log: mirror_debian-stretch-security.log
-#SignWith: 9D3D06EE
+#SignWith: 0x9D3D06EE
 #
 #Origin: Debian
 #Codename: stretch-backports
@@ -167,7 +167,7 @@ SignWith: 9D3D06EE
 #Components: main contrib non-free
 #Update: - debian-stretch-backports
 #Log: mirror_debian-stretch-backports.log
-#SignWith: 9D3D06EE
+#SignWith: 0x9D3D06EE
 
 #
 # mirror Debian unstable (sid)
@@ -181,7 +181,7 @@ Components: main contrib non-free
 UDebComponents: main
 Update: - debian-sid
 Log: mirror_debian-sid.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 #
 # mirror Debian experimental (rc-buggy)
@@ -195,7 +195,7 @@ Components: main contrib non-free
 UDebComponents: main
 Update: - debian-experimental
 Log: mirror_debian-experimental.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE
 
 #
 # Geogebra
@@ -207,4 +207,4 @@ Architectures: i386 amd64
 Components: main
 Update: - geogebra
 Log: mirror_geogebra.log
-SignWith: 9D3D06EE
+SignWith: 0x9D3D06EE

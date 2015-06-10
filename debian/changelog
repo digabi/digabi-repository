@@ -1,3 +1,9 @@
+digabi-repository (2.0.1) unstable; urgency=medium
+
+  * Fix path to CA certificate.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 10 Jun 2015 16:53:21 +0300
+
 digabi-repository (2.0) unstable; urgency=medium
 
   * Update to "real" Debian packaging.

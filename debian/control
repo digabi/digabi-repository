@@ -19,8 +19,10 @@ Description: Installs Digabi APT repository.
 Package: digabi-certificates
 Architecture: any
 Description: Install Digabi certificates into the system.
+ This package installs X509 certificates from Digabi.
 
 Package: digabi-archive-keyring
 Architecture: any
 Description: Install Digabi APT archive keyring.
+ This package installs APT to accept our GPG signatures.
 

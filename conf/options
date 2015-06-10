@@ -1,7 +1,7 @@
 ask-passphrase
 
-# Wait for 10 seconds * 6 times if lockfile exists
-waitforlock 6
+# Wait for 10 seconds * 3 times if lockfile exists
+waitforlock 3
 
 # Do not check free diskspace before downloads, assume that we have enough
 #spacecheck none

@@ -8,6 +8,9 @@ APT_KEY = $(NAME).gpg
 APT_KEY_ASCII = $(NAME).asc
 KEYID ?= 0x9D3D06EE
 
+ROOT_CA = data/ytl-root-ca.crt
+LOCALCERTSDIR = /usr/local/share/ca-certificates
+
 all:
 
 clean:
@@ -25,6 +28,7 @@ $(APT_KEY_ASCII): $(APT_KEY)
 install: $(SOURCES_LIST) $(APT_KEY)
 	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)
 	install -D -m 0644 $(APT_KEY) $(DESTDIR)/etc/apt/trusted.gpg.d/$(APT_KEY)
+	install -D -m 0644 $(ROOT_CA) $(DESTDIR)/$(LOCALCERTSDIR)
 
 setup-server: $(SOURCES_LIST) $(APT_KEY) $(APT_KEY_ASCII)
 	

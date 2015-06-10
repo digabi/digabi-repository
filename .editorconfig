@@ -9,8 +9,12 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
-[{debian/control,debian/rules}]
+[{debian/control}]
 indent_style = space
+indent_size = 1
+
+[{debian/rules}]
+indent_style = tab
 indent_size = 1
 
 [{Makefile}]

@@ -7,4 +7,5 @@ include /usr/share/dpkg/default.mk
 %:
 	dh $@ 
 
-
+# override_dh_userlocal to do nothing
+override_dh_usrlocal:

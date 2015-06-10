@@ -1,4 +1,5 @@
-repository
+repository/pool
+repository/dists
 db
 lists
 logs

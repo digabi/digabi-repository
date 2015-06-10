@@ -52,6 +52,11 @@ in
         info "Exporting..."
         ${REPREPRO} export
     ;;
+    migrate-to-unstable)
+        info "Migrating packages from upstream to unstable..."
+        ${REPREPRO} pull debian-unstable
+        ${REPREPRO} pull thirdparty-unstable
+    ;;
     snapshot)
         SNAPSHOT_ID="$(date +%Y%m%d%H%M%S)"
         info "Creating snapshot ${SNAPSHOT_ID} from stable..."

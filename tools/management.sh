@@ -3,7 +3,7 @@ set -e
 
 COMMAND="$1"
 REPREPRO_BIN="/usr/bin/reprepro"
-REPREPRO_FLAGS=""
+REPREPRO_FLAGS="-v"
 if [ -n "${DEBUG}" ]
 then
     REPREPRO_FLAGS="${REPREPRO_FLAGS} -V"

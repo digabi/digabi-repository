@@ -74,7 +74,7 @@ Codename: debian-testing
 Description: Custom Debian archive
 Architectures: i386 amd64 source
 Components: main contrib non-free
-Log: repo_debian-stable.log
+Log: repo_debian-testing.log
 SignWith: 0x9D3D06EE
 
 Origin: Debian
@@ -82,9 +82,36 @@ Codename: debian-unstable
 Description: Custom Debian archive
 Architectures: i386 amd64 source
 Components: main contrib non-free
-Log: repo_debian-stable.log
+Log: repo_debian-unstable.log
 SignWith: 0x9D3D06EE
 Pull: migrate-debian migrate-debian-updates migrate-debian-security
+
+#
+# Third party repositories
+#
+Origin: Thirdparty
+Codename: thirdparty-stable
+Description: Third party software archive
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Log: repo_thirdparty-stable.log
+SignWith: 0x9D3D06EE
+
+Origin: Thirdparty
+Codename: thirdparty-testing
+Description: Third party software archive
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Log: repo_thirdparty-stable.log
+SignWith: 0x9D3D06EE
+
+Origin: Thirdparty
+Codename: thirdparty-unstable
+Description: Third party software archive
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Log: repo_thirdparty-stable.log
+SignWith: 0x9D3D06EE
 
 
 #

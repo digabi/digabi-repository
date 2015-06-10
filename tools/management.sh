@@ -44,6 +44,10 @@ debug "Running command '${COMMAND}'..."
 
 case "${COMMAND}"
 in
+    init)
+        info "Initializing..."
+        ${REPREPRO} export
+    ;;
     do-nothing)
         info "Doing nothing."
         info "TODO: In future, run automatic management tasks: update packages etc."
@@ -51,11 +55,6 @@ in
     export)
         info "Exporting..."
         ${REPREPRO} export
-    ;;
-    migrate-to-unstable)
-        info "Migrating packages from upstream to unstable..."
-        ${REPREPRO} pull debian-unstable
-        ${REPREPRO} pull thirdparty-unstable
     ;;
     snapshot)
         SNAPSHOT_ID="$(date +%Y%m%d%H%M%S)"
@@ -67,10 +66,13 @@ in
     repo-maintenance)
         info "Clearing vanished distributions..."
         ${REPREPRO} clearvanished
+        $0 export
     ;;
     update-mirrors)
         info "Updating mirrors..."
         ${REPREPRO} -V update
+        info "Migrating packages from upstream to unstable..."
+        ${REPREPRO} -V pull
     ;;
     receive-gpg-keys-for-upstreams)
         error "TODO"

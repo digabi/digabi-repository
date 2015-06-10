@@ -23,4 +23,4 @@ Name: migrate-geogebra
 From: geogebra-stable
 Components: main
 Architectures: i386 amd64
-
+FilterList: deinstall packages/migrate-geogebra

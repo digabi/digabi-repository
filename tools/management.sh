@@ -52,6 +52,13 @@ in
         info "Exporting..."
         ${REPREPRO} export
     ;;
+    snapshot)
+        SNAPSHOT_ID="$(date +%Y%m%d%H%M%S)"
+        info "Creating snapshot ${SNAPSHOT_ID} from stable..."
+        ${REPREPRO} gensnapshot abitti-stable abitti-${SNAPSHOT_ID}
+        ${REPREPRO} gensnapshot digabi-stable digabi-${SNAPSHOT_ID}
+        ${REPREPRO} gensnapshot debian-stable debian-${SNAPSHOT_ID}
+    ;;
     repo-maintenance)
         info "Clearing vanished distributions..."
         ${REPREPRO} clearvanished

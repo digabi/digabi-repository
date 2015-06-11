@@ -135,7 +135,7 @@ Codename: jessie
 Description: Debian 8 (jessie) mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
-UDebComponents: main
+UDebComponents: main contrib non-free
 Update: debian-jessie
 Log: mirror_debian-jessie.log
 SignWith: 0x9D3D06EE
@@ -146,7 +146,7 @@ Codename: jessie-updates
 Description: Debian 8 (jessie) updates mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
-UDebComponents: main
+UDebComponents: main contrib non-free
 Update: debian-jessie-updates
 Log: mirror_debian-jessie-updates.log
 SignWith: 0x9D3D06EE
@@ -168,6 +168,7 @@ Codename: jessie-backports
 Description: Debian 8 (jessie) backports mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
+UDebComponents: main contrib non-free
 Update: debian-jessie-backports
 Log: mirror_debian-jessie-backports.log
 SignWith: 0x9D3D06EE
@@ -182,7 +183,7 @@ Codename: stretch
 Description: Debian 9 (stretch) mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
-UDebComponents: main
+UDebComponents: main contrib non-free
 Update: debian-stretch
 Log: mirror_debian-stretch.log
 SignWith: 0x9D3D06EE
@@ -204,7 +205,7 @@ Codename: stretch-security
 Description: Debian 9 (stretch) security mirror
 Architectures: i386 amd64 source
 Components: main contrib non-free
-#UDebComponents: main
+UDebComponents: main
 Update: - debian-stretch-security
 Log: mirror_debian-stretch-security.log
 SignWith: 0x9D3D06EE

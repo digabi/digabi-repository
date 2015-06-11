@@ -100,7 +100,7 @@ in
         ${REPREPRO} export
     ;;
     snapshot)
-        SNAPSHOT_ID="$(date +%Y%m%d%H%M%S)"
+        SNAPSHOT_ID="$(date +%Y%m%d%H%M%S).${BUILD_NUMBER:-0}"
         info "Creating snapshot ${SNAPSHOT_ID} from stable..."
         ${REPREPRO} gensnapshot abitti-stable abitti-${SNAPSHOT_ID}
         ${REPREPRO} gensnapshot digabi-stable digabi-${SNAPSHOT_ID}

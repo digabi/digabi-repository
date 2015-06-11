@@ -12,6 +12,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_digabi-stable.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Digabi
 Codename: digabi-testing
@@ -20,6 +21,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_digabi-testing.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Digabi
 Codename: digabi-unstable
@@ -28,6 +30,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_digabi-unstable.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 #
 # Abitti CBT
@@ -40,6 +43,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_abitti-stable.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Abitti
 Codename: abitti-testing
@@ -48,6 +52,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_abitti-testing.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Abitti
 Codename: abitti-unstable
@@ -56,6 +61,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_abitti-unstable.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 #
 # Our custom Debian distribution repository,
@@ -68,6 +74,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_debian-stable.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Debian
 Codename: debian-testing
@@ -76,6 +83,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_debian-testing.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Debian
 Codename: debian-unstable
@@ -85,6 +93,7 @@ Components: main contrib non-free
 Log: repo_debian-unstable.log
 SignWith: 0x9D3D06EE
 Pull: migrate-debian-jessie migrate-debian-jessie-updates migrate-debian-jessie-security migrate-debian-stretch migrate-debian-stretch-security
+Contents: percomponent
 
 #
 # Third party repositories
@@ -96,6 +105,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_thirdparty-stable.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Thirdparty
 Codename: thirdparty-testing
@@ -104,6 +114,7 @@ Architectures: i386 amd64 source
 Components: main contrib non-free
 Log: repo_thirdparty-stable.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Thirdparty
 Codename: thirdparty-unstable
@@ -113,6 +124,7 @@ Components: main contrib non-free
 Log: repo_thirdparty-stable.log
 SignWith: 0x9D3D06EE
 Pull: migrate-geogebra
+Contents: percomponent
 
 #
 # mirror Debian 8 (jessie), stable as of 04/2015
@@ -127,6 +139,7 @@ UDebComponents: main
 Update: debian-jessie
 Log: mirror_debian-jessie.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Debian
 Codename: jessie-updates
@@ -137,6 +150,7 @@ UDebComponents: main
 Update: debian-jessie-updates
 Log: mirror_debian-jessie-updates.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Debian
 Codename: jessie-security
@@ -147,6 +161,7 @@ Components: main contrib non-free
 Update: debian-jessie-security
 Log: mirror_debian-jessie-security.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 Origin: Debian
 Codename: jessie-backports
@@ -156,6 +171,7 @@ Components: main contrib non-free
 Update: debian-jessie-backports
 Log: mirror_debian-jessie-backports.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 #
 # mirror Debian 9 (stretch), testing as of 04/2015
@@ -170,6 +186,7 @@ UDebComponents: main
 Update: debian-stretch
 Log: mirror_debian-stretch.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 #Origin: Debian
 #Codename: stretch-updates
@@ -180,6 +197,7 @@ SignWith: 0x9D3D06EE
 #Update: - debian-stretch-updates
 #Log: mirror_debian-stretch-updates.log
 #SignWith: 0x9D3D06EE
+#Contents: percomponent
 
 Origin: Debian
 Codename: stretch-security
@@ -190,6 +208,7 @@ Components: main contrib non-free
 Update: - debian-stretch-security
 Log: mirror_debian-stretch-security.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 #Origin: Debian
 #Codename: stretch-backports
@@ -199,6 +218,7 @@ SignWith: 0x9D3D06EE
 #Update: - debian-stretch-backports
 #Log: mirror_debian-stretch-backports.log
 #SignWith: 0x9D3D06EE
+#Contents: percomponent
 
 #
 # mirror Debian unstable (sid)
@@ -213,6 +233,7 @@ UDebComponents: main
 Update: debian-sid
 Log: mirror_debian-sid.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 #
 # mirror Debian experimental (rc-buggy)
@@ -227,6 +248,7 @@ UDebComponents: main
 Update: debian-experimental
 Log: mirror_debian-experimental.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
 
 #
 # Geogebra
@@ -239,3 +261,5 @@ Components: main
 Update: geogebra
 Log: mirror_geogebra.log
 SignWith: 0x9D3D06EE
+Contents: percomponent
+

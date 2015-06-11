@@ -84,6 +84,10 @@ in
         info "Initializing..."
         ${REPREPRO} export
     ;;
+    pull)
+        info "Pulling packages..."
+        ${REPREPRO} -V pull
+    ;;
     import-package)
         if [ -n "${USE_UPSTREAM_ARTIFACTS}" ]
         then
@@ -115,7 +119,7 @@ in
         info "Updating mirrors..."
         ${REPREPRO} -V update
         info "Migrating packages from upstream to unstable..."
-        ${REPREPRO} -V pull
+        $0 pull
     ;;
     receive-gpg-keys-for-upstreams)
         error "TODO"

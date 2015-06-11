@@ -34,4 +34,4 @@ setup-server: $(SOURCES_LIST) $(APT_KEY) $(APT_KEY_ASCII)
 	
 
 deb:
-	debuild-pbuilder -us -uc -I
+	dpkg-buildpackage -us -uc -I

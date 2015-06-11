@@ -180,17 +180,17 @@ SignWith: 0x9D3D06EE
 #Update: - debian-stretch-updates
 #Log: mirror_debian-stretch-updates.log
 #SignWith: 0x9D3D06EE
-#
-#Origin: Debian
-#Codename: stretch-security
-#Description: Debian 9 (stretch) security mirror
-#Architectures: i386 amd64 source
-#Components: main contrib non-free
-##UDebComponents: main
-#Update: - debian-stretch-security
-#Log: mirror_debian-stretch-security.log
-#SignWith: 0x9D3D06EE
-#
+
+Origin: Debian
+Codename: stretch-security
+Description: Debian 9 (stretch) security mirror
+Architectures: i386 amd64 source
+omponents: main contrib non-free
+#UDebComponents: main
+Update: - debian-stretch-security
+Log: mirror_debian-stretch-security.log
+SignWith: 0x9D3D06EE
+
 #Origin: Debian
 #Codename: stretch-backports
 #Description: Debian 9 (stretch) backports mirror

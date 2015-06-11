@@ -23,5 +23,3 @@ echo "# Abitti computer-based testing software"
 echo "deb ${BASE_URL} abitti-${SUITE} ${COMPONENTS}"
 echo "#deb-src ${BASE_URL} abitti-${SUITE} ${COMPONENTS}"
 echo "##### END"
-
-echo "deb http://dev.digabi.fi/debian jessie main contrib non-free"

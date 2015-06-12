@@ -18,6 +18,8 @@ xfce4-battery-plugin				install
 xfce4-xkb-plugin				install
 xfce-keyboard-shortcuts				install
 thunar						install
+thunar-data					install
+libthunarx-2-0					install
 orage						install
 libgarcon-1-0					install
 gtk2-engines-xfce				install

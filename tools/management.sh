@@ -113,6 +113,7 @@ in
     repo-maintenance)
         info "Clearing vanished distributions..."
         ${REPREPRO} clearvanished
+        $0 pull
         $0 export
     ;;
     update-mirrors)

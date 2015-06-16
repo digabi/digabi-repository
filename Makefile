@@ -75,4 +75,7 @@ install: build $(SOURCES_LIST)
 initialize:
 	@echo TODO
 
+deb:
+	dpkg-buildpackage -us -uc
+
 .PHONY: verify-indices verify-results clean build install	

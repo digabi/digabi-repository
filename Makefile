@@ -1,4 +1,5 @@
 NAME = digabi
+KEYID ?= 0x9D3D06EE
 
 RELEASE ?= stable
 BASE_URL ?= http://dev.digabi.fi/debian
@@ -6,7 +7,6 @@ BASE_URL ?= http://dev.digabi.fi/debian
 SOURCES_LIST = $(NAME).list
 APT_KEY = $(NAME).gpg
 APT_KEY_ASCII = $(NAME).asc
-KEYID ?= 0x9D3D06EE
 
 ROOT_CA = ytl-root-ca.crt
 LOCALCERTSDIR = /usr/local/share/ca-certificates

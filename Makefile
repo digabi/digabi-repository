@@ -1,4 +1,10 @@
 NAME ?= digabi
+RELEASE ?= stable
+BASE_URL ?= http://dev.digabi.fi/debian
+
+ROOT_CA = ytl-root-ca.crt
+LOCALCERTSDIR = /usr/local/share/ca-certificates
+SOURCES_LIST = $(NAME).list
 
 TRUSTED-LIST := $(patsubst active-keys/add-%,trusted.gpg/$(NAME)-archive-%.gpg,$(wildcard active-keys/add-*))
 TMPRING := trusted.gpg/build-area
@@ -44,13 +50,24 @@ clean:
 	rm -f keyrings/team-members.gpg keyrings/team-members.gpg~ keyrings/team-members.gpg.lastchangeset
 	rm -rf $(TMPRING) trusted.gpg trustdb.gpg
 	rm -f keyrings/*.cache
+	rm -f $(SOURCES_LIST)
 
-install: build
+$(SOURCES_LIST):
+	./tools/generate-sources-list.sh $(RELEASE) $(BASE_URL) >$(SOURCES_LIST)
+
+install: build $(SOURCES_LIST)
+	# digabi-archive-keyring
 	install -d $(DESTDIR)/usr/share/keyrings/
 	cp keyrings/$(NAME)-archive-keyring.gpg $(DESTDIR)/usr/share/keyrings/
 	cp keyrings/$(NAME)-archive-removed-keys.gpg $(DESTDIR)/usr/share/keyrings/
 	install -d $(DESTDIR)/etc/apt/trusted.gpg.d/
 	cp $(shell find trusted.gpg/ -name '*.gpg' -type f) $(DESTDIR)/etc/apt/trusted.gpg.d/
+
+	# digabi-repository
+	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)
+
+	# digabi-certificates
+	install -D -m 0644 data/$(ROOT_CA) $(DESTDIR)/$(LOCALCERTSDIR)/$(ROOT_CA)
 
 initialize:
 	@echo TODO

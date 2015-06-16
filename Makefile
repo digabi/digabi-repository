@@ -1,53 +1,51 @@
-NAME = digabi
-SIGNING_KEY_ID ?= 0x9D3D06EE
-RELEASE ?= stable
-BASE_URL ?= http://dev.digabi.fi/debian
+NAME ?= digabi
 
-# APT configuration
-SOURCES_LIST = $(NAME).list
-APT_KEY = $(NAME).gpg
-APT_KEY_ASCII = $(NAME).asc
+TRUSTED-LIST := $(patsubst active-keys/add-%,trusted.gpg/$(NAME)-archive-%.gpg,$(wildcard active-keys/add-*))
+TMPRING := trusted.gpg/build-area
 
-# GPG Configuration
-GPG_BIN = /usr/bin/gpg
-GNUPGHOME ?= data/gpg
-GPG_FLAGS = --homedir=$(GNUPGHOME)
-GPG = $(GPG_BIN) $(GPG_FLAGS)
+GPG_OPTIONS := --no-options --no-default-keyring --no-auto-check-trustdb --trustdb-name ./trustdb.gpg
 
-ARCHIVE_KEYRING = $(NAME)-archive-keyring
-ARCHIVE_KEYRING_FILENAME = $(ARCHIVE_KEYRING).gpg
+build: verify-indices keyrings/$(NAME)-archive-keyring.gpg keyrings/$(NAME)-archive-removed-keys.gpg verify-results $(TRUSTED_LIST)
 
-# CA configuration
-ROOT_CA = ytl-root-ca.crt
-LOCALCERTSDIR = /usr/local/share/ca-certificates
+verify-indices: keyrings/team-members.gpg
+	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify active-keys/index.gpg active-keys/index
+	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify removed-keys/index.gpg removed-keys/index
 
-all:
+verify-results: keyrings/team-members.gpg keyrings/$(NAME)-archive-keyring.gpg keyrings/$(NAME)-archive-removed-keys.gpg
+	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify keyrings/$(NAME)-archive-keyring.gpg.asc keyrings/$(NAME)-archive-keyring.gpg
+	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify keyriongs/$(NAME)-archive-removed-keys.gpg.asc keyrings/$(NAME)-archive-removed-keys.gpg
+
+keyrings/$(NAME)-archive-keyring.gpg: active-keys/index
+	jetring-build -I $@ active-keys
+
+keyrings/$(NAME)-archive-removed-keys.gpg: removed-keys/index
+	jetring-build -I $@ removed-keys
+
+keyrings/team-members.gpg: team-members/index
+	jetring-build -I $@ team-members
+
+$(TRUSTED-LIST) :: trusted.gpg/$(NAME)-archive-%.gpg: active-keys/add-% active-keys/index
+	mkdir -p $(TMPRING) trusted.gpg
+	grep -F $(shell basename $<) -- active-keys/index > $(TMPRING)/index
+	cp $< $(TMPRING)
+	jetring-build -I $@ $(TMPRING)
+	rm -rf $(TMPRING)
 
 clean:
-	rm -f $(APT_KEY) $(APT_KEY_ASCII) $(SOURCES_LIST)
+	rm -f keyrings/$(NAME)-archive-keyring.gpg keyrings/$(NAME)-archive-keyring.gpg~ keyrings/$(NAME)-archive-keyring.gpg.lastchangeset
+	rm -f keyrings/$(NAME)-archive-removed-keys.gpg keyrings/$(NAME)-archive-removed-keys.gpg~ keyrings/$(NAME)-archive-removed-keys.gpg.lastchangeset
+	rm -f keyrings/team-members.gpg keyrings/team-members.gpg~ keyrings/team-members.gpg.lastchangeset
+	rm -rf $(TMPRING) trusted.gpg trustdb.gpg
+	rm -f keyrings/*.cache
 
-$(SOURCES_LIST):
-	./tools/generate-sources-list.sh $(RELEASE) $(BASE_URL) >$(SOURCES_LIST)
+install: build
+	install -d $(DESTDIR)/usr/share/keyrings/
+	cp keyrings/$(NAME)-archive-keyring.gpg $(DESTDIR)/usr/share/keyrings/
+	cp keyrings/$(NAME)-archive-removed-keys.gpg $(DESTDIR)/usr/share/keyrings/
+	install -d $(DESTDIR)/etc/apt/trusted.gpg.d/
+	cp $(shell find trusted.gpg/ -name '*.gpg' -type f) $(DESTDIR)/etc/apt/trusted.gpg.d/
 
-$(APT_KEY):
-	$(GPG) --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY)
+initialize:
+	@echo TODO
 
-$(APT_KEY_ASCII):
-	$(GPG) -a --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY_ASCII)
-
-$(GNUPGHOME)/$(ARCHIVE_KEYRING_FILENAME): $(APT_KEY)
-	$(GPG) --keyring $(ARCHIVE_KEYRING_FILENAME) --import $(APT_KEY)
-
-install: $(SOURCES_LIST) $(APT_KEY) $(GNUPGHOME)/$(ARCHIVE_KEYRING_FILENAME)
-	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)
-	install -D -m 0644 $(APT_KEY) $(DESTDIR)/etc/apt/trusted.gpg.d/$(APT_KEY)
-	
-	install -D -m 0644 $(GNUPGHOME)/$(ARCHIVE_KEYRING_FILENAME) $(DESTDIR)/usr/share/keyrings/$(ARCHIVE_KEYRING_FILENAME)
-	
-	install -D -m 0644 data/$(ROOT_CA) $(DESTDIR)/$(LOCALCERTSDIR)/$(ROOT_CA)
-
-setup-server: $(SOURCES_LIST) $(APT_KEY) $(APT_KEY_ASCII)
-	
-
-deb:
-	dpkg-buildpackage -us -uc -I
+.PHONY: verify-indices verify-results clean build install	

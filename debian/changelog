@@ -1,3 +1,12 @@
+digabi-repository (3.0.0) UNRELEASED; urgency=medium
+
+  * Use debian-archive-keyring scripts for maintaining the
+    archive keyring.
+  * Add README.maintainer from d-a-k package.
+  * 
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Tue, 16 Jun 2015 11:20:10 +0300
+
 digabi-repository (2.0.1) unstable; urgency=medium
 
   * Fix path to CA certificate.

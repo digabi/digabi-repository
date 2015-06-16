@@ -7,6 +7,10 @@ Copyright: 2013-2015 Ylioppilastutkintolautakunta <lautakunta@ylioppilastutkinto
            2013-2015 Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
 License: GPL-2.0+
 
+Files: Makefile
+Copyright: 2006 Michael Vogt <mvo@debian.org>
+License: GPL-2.0+
+
 Files: debian/*
 Copyright: 2015 Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
 License: GPL-2.0+

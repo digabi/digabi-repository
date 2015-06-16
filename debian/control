@@ -2,7 +2,7 @@ Source: digabi-repository
 Section: misc
 Priority: optional
 Maintainer: Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), jetring, gnupg
 Standards-Version: 3.9.6
 Homepage: https://github.com/digabi/digabi-repository
 Vcs-Git: https://github.com/digabi/digabi-repository.git
@@ -17,12 +17,27 @@ Description: Installs Digabi APT repository.
  This package installs Digabi APT repository to your system.
 
 Package: digabi-certificates
+Priority: important
 Architecture: any
 Description: Install Digabi certificates into the system.
  This package installs X509 certificates from Digabi.
 
 Package: digabi-archive-keyring
+Priority: important
+Multi-Arch: foreign
+Depends: gpgv, ${misc:Depends}
+Recommends: gnupg
 Architecture: any
-Description: Install Digabi APT archive keyring.
- This package installs APT to accept our GPG signatures.
+Description: GnuPG archive keys of the Digabi archive.
+ This package installs Digabi keyrings to /usr/share/keyrings.
+
+Package: digabi-archive-keyring-udeb
+XC-Package-Type: udeb
+Priority: optional
+Architecture: all
+Section: debian-installer
+Depends: ${misc:Depends}
+Recommends: gpgv-udeb
+Description: GnuPG archive keys of the Digabi archive.
+ This package installs archive keys for Digabi.
 

@@ -14,6 +14,9 @@ GNUPGHOME ?= data/gpg
 GPG_FLAGS = --homedir=$(GNUPGHOME)
 GPG = $(GPG_BIN) $(GPG_FLAGS)
 
+ARCHIVE_KEYRING = $(NAME)-archive-keyring
+ARCHIVE_KEYRING_FILENAME = $(ARCHIVE_KEYRING).gpg
+
 # CA configuration
 ROOT_CA = ytl-root-ca.crt
 LOCALCERTSDIR = /usr/local/share/ca-certificates
@@ -27,10 +30,10 @@ $(SOURCES_LIST):
 	./tools/generate-sources-list.sh $(RELEASE) $(BASE_URL) >$(SOURCES_LIST)
 
 $(APT_KEY):
-	gpg --keyring data/gpg/pubring.gpg --no-default-keyring --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY)
-	gpg -a --keyring data/gpg/pubring.gpg --no-default-keyring --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY_ASCII)
+	$(GPG) --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY)
 
-$(APT_KEY_ASCII): $(APT_KEY)
+$(APT_KEY_ASCII):
+	$(GPG) -a --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY_ASCII)
 
 install: $(SOURCES_LIST) $(APT_KEY)
 	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)

@@ -7,6 +7,9 @@ GPG_OPTIONS := --no-options --no-default-keyring --no-auto-check-trustdb --trust
 
 build: verify-indices keyrings/$(NAME)-archive-keyring.gpg keyrings/$(NAME)-archive-removed-keys.gpg verify-results $(TRUSTED_LIST)
 
+sign-keyring: keyrings/$(NAME)-archive-keyring.gpg
+	gpg -a --detach-sign keyrings/$(NAME)-archive-keyring.gpg
+
 verify-indices: keyrings/team-members.gpg
 	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify active-keys/index.gpg active-keys/index
 	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify removed-keys/index.gpg removed-keys/index

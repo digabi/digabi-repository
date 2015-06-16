@@ -11,7 +11,7 @@ if [ -n "${DEBUG}" ]
 then
     REPREPRO_FLAGS="${REPREPRO_FLAGS} -V"
 fi
-REPREPRO="${REPREPRO_BIN} ${REPREPRO_FLAGS}"
+REPREPRO="sudo -u digabi-repository ${REPREPRO_BIN} ${REPREPRO_FLAGS}"
 
 if [ -z "${COMMAND}" ]
 then

@@ -15,13 +15,20 @@ Configuration for packages that get pulled from upstream repos is located at `co
 
 
 ## Repository server
+To install required packages, run
 
     apt-get install digabi-repository-server
     sudo -u digabi-repository gpg --import /path/to/digabi-repository-private.key
 
 Then, initialize the repository & update content.
 
-    digabi-repository-management init
-    digabi-repository-management update-mirrors
+    sudo digabi-repository-management init
+    sudo digabi-repository-management update-mirrors
 
 Repository is published at `/var/lib/digabi-repository/repository`, share this directory using your favorite HTTP server.
+
+Repository is running as user `digabi-repository`. The management script, ie. `digabi-repository-management` uses sudo to control repository as correct user. If you wan't to allow changes to repository without password, add
+
+    youruser digabi-repository:digabi-repository    NOPASSWD: ALL
+
+to `/etc/sudoers.d/digabi-repository`.

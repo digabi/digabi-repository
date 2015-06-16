@@ -1,13 +1,20 @@
 NAME = digabi
 SIGNING_KEY_ID ?= 0x9D3D06EE
-
 RELEASE ?= stable
 BASE_URL ?= http://dev.digabi.fi/debian
 
+# APT configuration
 SOURCES_LIST = $(NAME).list
 APT_KEY = $(NAME).gpg
 APT_KEY_ASCII = $(NAME).asc
 
+# GPG Configuration
+GPG_BIN = /usr/bin/gpg
+GNUPGHOME ?= data/gpg
+GPG_FLAGS = --homedir=$(GNUPGHOME)
+GPG = $(GPG_BIN) $(GPG_FLAGS)
+
+# CA configuration
 ROOT_CA = ytl-root-ca.crt
 LOCALCERTSDIR = /usr/local/share/ca-certificates
 

@@ -12,6 +12,7 @@ init:
 
 sign-keyring: keyrings/$(NAME)-archive-keyring.gpg
 	gpg -a --detach-sign keyrings/$(NAME)-archive-keyring.gpg
+	gpg -a --detach-sign keyrings/$(NAME)-archive-removed-keys.gpg
 
 verify-indices: keyrings/team-members.gpg
 	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify active-keys/index.gpg active-keys/index
@@ -19,7 +20,7 @@ verify-indices: keyrings/team-members.gpg
 
 verify-results: keyrings/team-members.gpg keyrings/$(NAME)-archive-keyring.gpg keyrings/$(NAME)-archive-removed-keys.gpg
 	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify keyrings/$(NAME)-archive-keyring.gpg.asc keyrings/$(NAME)-archive-keyring.gpg
-	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify keyriongs/$(NAME)-archive-removed-keys.gpg.asc keyrings/$(NAME)-archive-removed-keys.gpg
+	gpg ${GPG_OPTIONS} --keyring keyrings/team-members.gpg --verify keyrings/$(NAME)-archive-removed-keys.gpg.asc keyrings/$(NAME)-archive-removed-keys.gpg
 
 keyrings/$(NAME)-archive-keyring.gpg: active-keys/index
 	jetring-build -I $@ active-keys

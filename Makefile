@@ -5,7 +5,7 @@ TMPRING := trusted.gpg/build-area
 
 GPG_OPTIONS := --no-options --no-default-keyring --no-auto-check-trustdb --trustdb-name ./trustdb.gpg
 
-build: init verify-indices keyrings/$(NAME)-archive-keyring.gpg keyrings/$(NAME)-archive-removed-keys.gpg verify-results $(TRUSTED_LIST)
+build: init verify-indices keyrings/$(NAME)-archive-keyring.gpg keyrings/$(NAME)-archive-removed-keys.gpg verify-results $(TRUSTED-LIST)
 
 init:
 	mkdir -p keyrings

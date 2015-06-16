@@ -6,10 +6,8 @@ waitforlock 3
 # Do not check free diskspace before downloads, assume that we have enough
 #spacecheck none
 
-# Show progress bar when downloading files
-show-percent
-
 # Configure paths
+basedir /var/lib/digabi-repository
 outdir +b/data/repository
 logdir +b/data/logs
 dbdir +b/data/db

@@ -3,7 +3,7 @@ set -e
 
 COMMAND="$1"
 REPREPRO_BIN="/usr/bin/reprepro"
-REPREPRO_FLAGS="-v"
+REPREPRO_FLAGS="-v --confdir=/etc/digabi-repository"
 
 COMPONENT="main"
 

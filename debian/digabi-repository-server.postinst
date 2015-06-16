@@ -9,6 +9,10 @@ case "$1" in
         then
             ln -s /usr/share/keyrings/debian-archive-keyring.gpg /etc/digabi-repository/trusted.gpg.d/debian-archive-keyring.gpg
         fi
+        if [ ! -e /etc/digabi-repository/trusted.gpg.d/digabi-archive-keyring.gpg ]
+        then
+            ln -s /usr/share/keyrings/digabi-archive-keyring.gpg /etc/digabi-repository/trusted.gpg.d/digabi-archive-keyring.gpg
+        fi
 	su digabi-repository -c "gpg --import /etc/digabi-repository/trusted.gpg.d/*.gpg"
         ;;
     *)

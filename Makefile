@@ -78,6 +78,8 @@ install: build $(SOURCES_LIST)
 	install -D -m 0644 conf/pulls $(DESTDIR)/etc/digabi-repository/pulls
 	install -D -m 0644 conf/updates $(DESTDIR)/etc/digabi-repository/updates
 	install -D -m 0644 other-keys/geogebra.asc $(DESTDIR)/etc/digabi-repository/trusted.gpg.d/geogebra.gpg
+	
+	install -D -m 0755 tools/management.sh $(DESTDIR)/usr/bin/digabi-repository-management
 
 initialize:
 	@echo TODO

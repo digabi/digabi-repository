@@ -42,6 +42,6 @@ Description: GnuPG archive keys of the Digabi archive.
  This package installs archive keys for Digabi.
 
 Package: digabi-repository-server
-Depends: ${misc:Depends}, reprepro
+Depends: ${misc:Depends}, reprepro, httpd
 Description: Install required packages to run Digabi repository.
  Installs required thingies to run Digabi repository server.

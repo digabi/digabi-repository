@@ -1,5 +1,5 @@
 NAME = digabi
-KEYID ?= 0x9D3D06EE
+SIGNING_KEY_ID ?= 0x9D3D06EE
 
 RELEASE ?= stable
 BASE_URL ?= http://dev.digabi.fi/debian
@@ -20,8 +20,8 @@ $(SOURCES_LIST):
 	./tools/generate-sources-list.sh $(RELEASE) $(BASE_URL) >$(SOURCES_LIST)
 
 $(APT_KEY):
-	gpg --keyring data/gpg/pubring.gpg --no-default-keyring --export $(KEYID) 2>/dev/null >$(APT_KEY)
-	gpg -a --keyring data/gpg/pubring.gpg --no-default-keyring --export $(KEYID) 2>/dev/null >$(APT_KEY_ASCII)
+	gpg --keyring data/gpg/pubring.gpg --no-default-keyring --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY)
+	gpg -a --keyring data/gpg/pubring.gpg --no-default-keyring --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY_ASCII)
 
 $(APT_KEY_ASCII): $(APT_KEY)
 

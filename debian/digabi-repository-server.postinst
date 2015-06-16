@@ -5,6 +5,10 @@ set -e
 case "$1" in
     configure)
 	adduser --system --home /var/lib/digabi-repository --shell /bin/sh --group digabi-repository || true
+	if [ ! -e /etc/digabi-repository/trusted.gpg.d/debian-archive-keyring.gpg ]
+        then
+            ln -s /usr/share/keyrings/debian-archive-keyring.gpg /etc/digabi-repository/trusted.gpg.d/debian-archive-keyring.gpg
+        fi
         ;;
     *)
         ;;

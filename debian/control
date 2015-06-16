@@ -12,11 +12,13 @@ Replaces: digabi-repository
 Provides: digabi-repository
 Conflicts: digabi-repository
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, digabi-archive-keyring
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ digabi-archive-keyring
 Description: Installs Digabi APT repository.
  This package installs Digabi APT repository to your system.
 
 Package: digabi-certificates
+Depends: ${misc:Depends}
 Priority: important
 Architecture: all
 Description: Install Digabi certificates into the system.
@@ -43,6 +45,7 @@ Description: GnuPG archive keys of the Digabi archive.
 
 Package: digabi-repository-server
 Architecture: all
-Depends: ${misc:Depends}, reprepro, nginx | httpd
+Depends: ${misc:Depends}, reprepro, nginx | httpd,
+ debian-archive-keyring, adduser
 Description: Install required packages to run Digabi repository.
  Installs required thingies to run Digabi repository server.

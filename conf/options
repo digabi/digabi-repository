@@ -8,9 +8,9 @@ waitforlock 3
 
 # Configure paths
 basedir /var/lib/digabi-repository
-outdir +b/data/repository
-logdir +b/data/logs
-dbdir +b/data/db
-listdir +b/data/lists
-morguedir +o/morgue
+outdir +b/repository
+logdir +b/logs
+dbdir +b/db
+listdir +b/lists
+morguedir +b/morgue
 

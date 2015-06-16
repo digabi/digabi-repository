@@ -11,7 +11,6 @@ show-percent
 
 # Configure paths
 outdir +b/data/repository
-gnupghome +b/data/gpg
 logdir +b/data/logs
 dbdir +b/data/db
 listdir +b/data/lists

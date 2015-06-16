@@ -52,6 +52,9 @@ clean:
 	rm -f keyrings/*.cache
 	rm -f $(SOURCES_LIST)
 
+purge: clean
+	rm -rf trusted.gpg
+
 $(SOURCES_LIST):
 	./tools/generate-sources-list.sh $(RELEASE) $(BASE_URL) >$(SOURCES_LIST)
 

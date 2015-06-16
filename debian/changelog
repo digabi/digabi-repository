@@ -1,4 +1,4 @@
-digabi-repository (3.0.0) UNRELEASED; urgency=medium
+digabi-repository (3.0.0) unstable; urgency=medium
 
   * Use debian-archive-keyring scripts for maintaining the
     archive keyring.
@@ -6,7 +6,7 @@ digabi-repository (3.0.0) UNRELEASED; urgency=medium
   * Add digabi-repository-server package.
   * Install digabi-repository-management command to control our repository.
 
- -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Tue, 16 Jun 2015 11:20:10 +0300
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Tue, 16 Jun 2015 13:37:54 +0300
 
 digabi-repository (2.0.1) unstable; urgency=medium
 

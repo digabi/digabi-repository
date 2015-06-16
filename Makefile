@@ -65,12 +65,19 @@ install: build $(SOURCES_LIST)
 	cp keyrings/$(NAME)-archive-removed-keys.gpg $(DESTDIR)/usr/share/keyrings/
 	install -d $(DESTDIR)/etc/apt/trusted.gpg.d/
 	cp $(shell find trusted.gpg/ -name '*.gpg' -type f) $(DESTDIR)/etc/apt/trusted.gpg.d/
-
+	
 	# digabi-repository
 	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)
-
+	
 	# digabi-certificates
 	install -D -m 0644 data/$(ROOT_CA) $(DESTDIR)/$(LOCALCERTSDIR)/$(ROOT_CA)
+	
+	# digabi-repository-server
+	install -D -m 0644 conf/options $(DESTDIR)/etc/digabi-repository/options
+	install -D -m 0644 conf/distributions $(DESTDIR)/etc/digabi-repository/distributions
+	install -D -m 0644 conf/pulls $(DESTDIR)/etc/digabi-repository/pulls
+	install -D -m 0644 conf/updates $(DESTDIR)/etc/digabi-repository/updates
+	install -D -m 0644 data/gpg/pubring.gpg $(DESTDIR)/etc/digabi-repository/upstream-keys.gpg
 
 initialize:
 	@echo TODO

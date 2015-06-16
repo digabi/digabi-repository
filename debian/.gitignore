@@ -1,7 +1,9 @@
-digabi-repository
 digabi-archive
 digabi-archive-keyring
+digabi-archive-keyring-udeb
 digabi-certificates
+digabi-repository
+digabi-repository-server
 *.substvars
 *.log
 files

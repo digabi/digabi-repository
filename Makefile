@@ -35,9 +35,15 @@ $(APT_KEY):
 $(APT_KEY_ASCII):
 	$(GPG) -a --export $(SIGNING_KEY_ID) 2>/dev/null >$(APT_KEY_ASCII)
 
-install: $(SOURCES_LIST) $(APT_KEY)
+$(GNUPGHOME)/$(ARCHIVE_KEYRING_FILENAME): $(APT_KEY)
+	$(GPG) --keyring $(ARCHIVE_KEYRING_FILENAME) --import $(APT_KEY)
+
+install: $(SOURCES_LIST) $(APT_KEY) $(GNUPGHOME)/$(ARCHIVE_KEYRING_FILENAME)
 	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)
 	install -D -m 0644 $(APT_KEY) $(DESTDIR)/etc/apt/trusted.gpg.d/$(APT_KEY)
+	
+	install -D -m 0644 $(GNUPGHOME)/$(ARCHIVE_KEYRING_FILENAME) $(DESTDIR)/usr/share/keyrings/$(ARCHIVE_KEYRING_FILENAME)
+	
 	install -D -m 0644 data/$(ROOT_CA) $(DESTDIR)/$(LOCALCERTSDIR)/$(ROOT_CA)
 
 setup-server: $(SOURCES_LIST) $(APT_KEY) $(APT_KEY_ASCII)

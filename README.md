@@ -23,3 +23,5 @@ Then, initialize the repository & update content.
 
     digabi-repository-management init
     digabi-repository-management update-mirrors
+
+Repository is published at `/var/lib/digabi-repository/repository`, share this directory using your favorite HTTP server.

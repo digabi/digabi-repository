@@ -4,7 +4,7 @@ set -e
 
 case "$1" in
     configure)
-	adduser --system --home /var/lib/digabi-repository --shell /bin/sh --group digabi-repository
+	adduser --system --home /var/lib/digabi-repository --shell /bin/sh --group digabi-repository || true
         ;;
     *)
         ;;

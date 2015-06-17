@@ -5,9 +5,9 @@ COMMAND="$1"
 REPREPRO_BIN="/usr/bin/reprepro"
 REPREPRO_CONFDIR="/etc/digabi-repository"
 
-if [ -r /etc/defaults/digabi-repository ]
+if [ -r /etc/default/digabi-repository ]
 then
-    . /etc/defaults/digabi-repository
+    . /etc/default/digabi-repository
 fi
 
 REPREPRO_FLAGS="-v --confdir=${REPREPRO_CONFDIR} --basedir=${REPREPRO_BASEDIR} --logdir=${REPREPRO_LOGDIR}"

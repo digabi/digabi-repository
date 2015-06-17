@@ -2,4 +2,7 @@ etc/digabi-repository
 etc/logrotate.d/digabi-repository-server
 usr/bin/digabi-repository-management
 usr/lib/digabi-repository/digabi-sources-list
+usr/share/digabi-repository/install-repository.sh
+usr/share/digabi-repository/install-repository.sh.sha256
+usr/share/digabi-repository/install-repository.sh.sha256.asc
 var/log/digabi-repository

@@ -58,7 +58,14 @@ purge: clean
 $(SOURCES_LIST):
 	./tools/generate-sources-list.sh $(RELEASE) $(BASE_URL) >$(SOURCES_LIST)
 
-install: build $(SOURCES_LIST)
+install-repository.sh: build $(SOURCES_LIST)
+	./tools/generate-install-repository.sh >install-repository.sh
+
+sign-install-repository.sh: install-repository.sh
+	sha256sum install-repository.sh >install-repository.sh.sha256
+	gpg -a --detach-sign install-repository.sh.sha256
+
+install: build $(SOURCES_LIST) install-repository.sh
 	# digabi-archive-keyring
 	install -d $(DESTDIR)/usr/share/keyrings/
 	cp keyrings/$(NAME)-archive-keyring.gpg $(DESTDIR)/usr/share/keyrings/
@@ -85,6 +92,10 @@ install: build $(SOURCES_LIST)
 	install -D -m 0755 tools/generate-sources-list.sh $(DESTDIR)/usr/lib/digabi-repository/digabi-sources-list
 	install -d -m 0755 $(DESTDIR)/var/log/digabi-repository
 	install -D -m 0644 digabi-repository-server.logrotate $(DESTDIR)/etc/logrotate.d/digabi-repository-server
+	
+	install -D -m 0644 install-repository.sh $(DESTDIR)/usr/share/digabi-repository/install-repository.sh
+	install -D -m 0644 install-repository.sh.sha256 $(DESTDIR)/usr/share/digabi-repository/install-repository.sh.sha256
+	install -D -m 0644 install-repository.sh.sha256.asc $(DESTDIR)/usr/share/digabi-repository/install-repository.sh.sha256.asc
 
 initialize:
 	@echo TODO

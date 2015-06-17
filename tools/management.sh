@@ -3,7 +3,14 @@ set -e
 
 COMMAND="$1"
 REPREPRO_BIN="/usr/bin/reprepro"
-REPREPRO_FLAGS="-v --confdir=/etc/digabi-repository"
+REPREPRO_CONFDIR="/etc/digabi-repository"
+
+if [ -r /etc/defaults/digabi-repository ]
+then
+    . /etc/defaults/digabi-repository
+fi
+
+REPREPRO_FLAGS="-v --confdir=${REPREPRO_CONFDIR}"
 
 COMPONENT="main"
 

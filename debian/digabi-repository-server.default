@@ -2,5 +2,6 @@
 # Defaults for digabi-repository-server package
 #
 
-REPREPRO_BASE_DIR=/var/lib/digabi-repository
-REPREPRO_CONF_DIR=/etc/digabi-repository
+REPREPRO_BASEDIR=/var/lib/digabi-repository
+REPREPRO_CONFDIR=/etc/digabi-repository
+REPREPRO_OUTDIR=${REPREPRO_BASEDIR}/repository

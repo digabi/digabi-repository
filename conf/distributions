@@ -1,6 +1,15 @@
 # TODO: Contents: .gz .bz2 .xz
 # TODO: ValidFor: 7d
 
+Origin: DigabiSupport
+Codename: digabi-support
+Description: Custom packages for the infrastructure
+Architectures: i386 amd64 source
+Components: main contrib non-free
+Log: repo_digabi-support.log
+SignWith: 0x9D3D06EE
+Contents: percomponent
+
 #
 # Custom packages for DigabiOS, build system etc.
 #

@@ -6,4 +6,5 @@ usr/lib/digabi-repository/digabi-sources-list
 usr/share/digabi-repository/install-repository.sh
 usr/share/digabi-repository/install-repository.sh.sha256
 usr/share/digabi-repository/install-repository.sh.sha256.asc
+usr/share/digabi-repository/www
 var/log/digabi-repository

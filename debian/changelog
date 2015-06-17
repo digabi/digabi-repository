@@ -1,3 +1,9 @@
+digabi-repository (3.2.5) unstable; urgency=medium
+
+  * Add new document root for repository server.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 13:28:47 +0300
+
 digabi-repository (3.2.4) unstable; urgency=medium
 
   * Enable autoindexing on nginx share.

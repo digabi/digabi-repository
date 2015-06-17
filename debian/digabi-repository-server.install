@@ -1,5 +1,6 @@
 etc/digabi-repository
 etc/logrotate.d/digabi-repository-server
+etc/nginx/sites-available
 usr/bin/digabi-repository-management
 usr/lib/digabi-repository/digabi-sources-list
 usr/share/digabi-repository/install-repository.sh

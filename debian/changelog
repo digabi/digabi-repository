@@ -1,10 +1,10 @@
-digabi-repository (3.1.2) UNRELEASED; urgency=medium
+digabi-repository (3.1.2) unstable; urgency=medium
 
   * Add missing migration configurations to digabi-repository-server.
   * Rename sources.list generator to digabi-sources-list.
   * Add logrotate config to digabi-repository-server package.
 
- -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 08:21:50 +0300
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 08:24:34 +0300
 
 digabi-repository (3.1.1) unstable; urgency=medium
 

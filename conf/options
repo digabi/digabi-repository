@@ -6,10 +6,8 @@ waitforlock 3
 # Do not check free diskspace before downloads, assume that we have enough
 #spacecheck none
 
-# Configure paths
-basedir /var/lib/digabi-repository
+# NOTE: For path configuration, see also /etc/defaults/digabi-repository
 outdir +b/repository
-logdir +b/logs
 dbdir +b/db
 listdir +b/lists
 morguedir +b/morgue

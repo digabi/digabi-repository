@@ -10,7 +10,7 @@ then
     . /etc/defaults/digabi-repository
 fi
 
-REPREPRO_FLAGS="-v --confdir=${REPREPRO_CONFDIR}"
+REPREPRO_FLAGS="-v --confdir=${REPREPRO_CONFDIR} --basedir=${REPREPRO_BASEDIR} --logdir=${REPREPRO_LOGDIR}"
 
 COMPONENT="main"
 

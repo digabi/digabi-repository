@@ -1,6 +1,8 @@
 digabi-repository (3.0.1) UNRELEASED; urgency=medium
 
   * Add script for generating sources.list.
+  * Allow configuring paths in /etc/default/digabi-repository.
+  * Move logs to /var/log/digabi-repository.
 
  -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 07:53:40 +0300
 

@@ -5,6 +5,7 @@ BASE_URL ?= http://dev.digabi.fi/debian
 ROOT_CA = ytl-root-ca.crt
 LOCALCERTSDIR = /usr/local/share/ca-certificates
 SOURCES_LIST = $(NAME).list
+APT_KEY = $(NAME).asc
 
 TRUSTED-LIST := $(patsubst active-keys/add-%,trusted.gpg/$(NAME)-archive-%.gpg,$(wildcard active-keys/add-*))
 TMPRING := trusted.gpg/build-area
@@ -50,10 +51,13 @@ clean:
 	rm -f keyrings/team-members.gpg keyrings/team-members.gpg~ keyrings/team-members.gpg.lastchangeset
 	rm -rf $(TMPRING) trusted.gpg trustdb.gpg
 	rm -f keyrings/*.cache
-	rm -f $(SOURCES_LIST)
+	rm -f $(SOURCES_LIST) $(APT_KEY)
 
 purge: clean
 	rm -rf trusted.gpg
+
+$(APT_KEY): keyrings/$(NAME)-archive-keyring.gpg
+	gpg -a --keyring=keyrings/$(NAME)-archive-keyring.gpg --no-default-keyring --export >$(APT_KEY)
 
 $(SOURCES_LIST):
 	./tools/generate-sources-list.sh $(RELEASE) $(BASE_URL) >$(SOURCES_LIST)

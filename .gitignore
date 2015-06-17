@@ -1,6 +1,7 @@
 *~
 *.swp
 digabi.list
+digabi.gpg
 trustdb.gpg
 trusted.gpg
 keyrings

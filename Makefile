@@ -100,6 +100,8 @@ install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh
 	install -d -m 0755 $(DESTDIR)/var/log/digabi-repository
 	install -D -m 0644 digabi-repository-server.logrotate $(DESTDIR)/etc/logrotate.d/digabi-repository-server
 	
+	install -D -m 0644 nginx.conf $(DESTDIR)/etc/nginx/sites-available/digabi-repository-server
+	
 	install -D -m 0644 install-repository.sh $(DESTDIR)/usr/share/digabi-repository/install-repository.sh
 	install -D -m 0644 install-repository.sh.sha256 $(DESTDIR)/usr/share/digabi-repository/install-repository.sh.sha256
 	install -D -m 0644 install-repository.sh.sha256.asc $(DESTDIR)/usr/share/digabi-repository/install-repository.sh.sha256.asc

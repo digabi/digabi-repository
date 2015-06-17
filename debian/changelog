@@ -1,8 +1,9 @@
-digabi-repository (3.2.1) UNRELEASED; urgency=medium
+digabi-repository (3.2.1) unstable; urgency=medium
 
   * Install archive configuration in digabi-archive.
+  * Add configuration file for nginx.
 
- -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 10:21:07 +0300
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 13:16:02 +0300
 
 digabi-repository (3.2.0) unstable; urgency=medium
 

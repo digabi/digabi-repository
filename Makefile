@@ -78,9 +78,11 @@ install: build $(SOURCES_LIST)
 	install -D -m 0644 conf/pulls $(DESTDIR)/etc/digabi-repository/pulls
 	install -D -m 0644 conf/updates $(DESTDIR)/etc/digabi-repository/updates
 	install -D -m 0644 other-keys/geogebra.asc $(DESTDIR)/etc/digabi-repository/trusted.gpg.d/geogebra.gpg
+	install -d -m 0755 $(DESTDIR)/etc/digabi-repository/packages
+	install -D -m 0644 conf/packages/* $(DESTDIR)/etc/digabi-repository/packages
 	
 	install -D -m 0755 tools/management.sh $(DESTDIR)/usr/bin/digabi-repository-management
-	install -D -m 0755 tools/generate-sources-list.sh $(DESTDIR)/usr/lib/digabi-repository/generate-sources-list.sh
+	install -D -m 0755 tools/generate-sources-list.sh $(DESTDIR)/usr/lib/digabi-repository/digabi-sources-list
 	install -d -m 0755 $(DESTDIR)/var/log/digabi-repository
 	install -D -m 0644 digabi-repository-server.logrotate $(DESTDIR)/etc/logrotate.d/digabi-repository-server
 

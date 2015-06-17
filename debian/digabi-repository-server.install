@@ -1,2 +1,5 @@
 etc/digabi-repository
+etc/logrotate.d/digabi-repository-server
 usr/bin/digabi-repository-management
+usr/lib/digabi-repository/digabi-sources-list
+var/log/digabi-repository

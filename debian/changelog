@@ -1,11 +1,11 @@
-digabi-repository (3.0.1) UNRELEASED; urgency=medium
+digabi-repository (3.1.0) unstable; urgency=medium
 
   * Add script for generating sources.list.
   * Allow configuring paths in /etc/default/digabi-repository.
   * Move logs to /var/log/digabi-repository.
   * Add logrotate configuration for digabi-repository-server.
 
- -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 07:53:40 +0300
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 08:11:52 +0300
 
 digabi-repository (3.0.0) unstable; urgency=medium
 

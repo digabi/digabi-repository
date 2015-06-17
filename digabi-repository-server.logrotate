@@ -4,7 +4,7 @@
     rotate 52
     compress
     delaycompress
-    notifyempty
+    notifempty
     create 0644 digabi-repository digabi-repository
     sharedscripts
 }

@@ -1,3 +1,9 @@
+digabi-repository (3.1.1) unstable; urgency=medium
+
+  * Fix path to defaults file.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 08:14:22 +0300
+
 digabi-repository (3.1.0) unstable; urgency=medium
 
   * Add script for generating sources.list.

@@ -4,10 +4,11 @@ set -e
 COMMAND="$1"
 REPREPRO_BIN="/usr/bin/reprepro"
 REPREPRO_CONFDIR="/etc/digabi-repository"
+REPREPRO_LOGDIR="/var/log/digabi-repository"
 
-if [ -r /etc/default/digabi-repository ]
+if [ -r /etc/default/digabi-repository-server ]
 then
-    . /etc/default/digabi-repository
+    . /etc/default/digabi-repository-server
 fi
 
 REPREPRO_FLAGS="-v --confdir=${REPREPRO_CONFDIR} --basedir=${REPREPRO_BASEDIR} --logdir=${REPREPRO_LOGDIR}"

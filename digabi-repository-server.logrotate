@@ -1,0 +1,10 @@
+/var/log/digabi-repository/*.log {
+    weekly
+    missingok
+    rotate 52
+    compress
+    delaycompress
+    notifyempty
+    create 0644 digabi-repository digabi-repository
+    sharedscripts
+}

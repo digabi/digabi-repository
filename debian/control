@@ -47,5 +47,6 @@ Package: digabi-repository-server
 Architecture: all
 Depends: ${misc:Depends}, reprepro, nginx | httpd,
  debian-archive-keyring, adduser, digabi-archive-keyring, sudo
+Recommends: logrotate
 Description: Install required packages to run Digabi repository.
  Installs required thingies to run Digabi repository server.

@@ -82,6 +82,7 @@ install: build $(SOURCES_LIST)
 	install -D -m 0755 tools/management.sh $(DESTDIR)/usr/bin/digabi-repository-management
 	install -D -m 0755 tools/generate-sources-list.sh $(DESTDIR)/usr/lib/digabi-repository/generate-sources-list.sh
 	install -d -m 0755 $(DESTDIR)/var/log/digabi-repository
+	install -D -m 0644 digabi-repository-server.logrotate $(DESTDIR)/etc/logrotate.d/digabi-repository-server
 
 initialize:
 	@echo TODO

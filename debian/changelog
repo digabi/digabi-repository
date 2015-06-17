@@ -1,3 +1,9 @@
+digabi-repository (3.2.4) unstable; urgency=medium
+
+  * Enable autoindexing on nginx share.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 17 Jun 2015 13:24:59 +0300
+
 digabi-repository (3.2.3) unstable; urgency=medium
 
   * Update nginx configuration.

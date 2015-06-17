@@ -80,6 +80,7 @@ install: build $(SOURCES_LIST)
 	install -D -m 0644 other-keys/geogebra.asc $(DESTDIR)/etc/digabi-repository/trusted.gpg.d/geogebra.gpg
 	
 	install -D -m 0755 tools/management.sh $(DESTDIR)/usr/bin/digabi-repository-management
+	install -D -m 0755 tools/generate-sources-list.sh $(DESTDIR)/usr/lib/digabi-repository/generate-sources-list.sh
 
 initialize:
 	@echo TODO

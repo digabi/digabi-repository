@@ -52,6 +52,7 @@ clean:
 	rm -rf $(TMPRING) trusted.gpg trustdb.gpg
 	rm -f keyrings/*.cache
 	rm -f $(SOURCES_LIST) $(APT_KEY)
+	rm -f install-repository.sh install-repository.sh.sha256 install-repository.sh.sha256.asc
 
 purge: clean
 	rm -rf trusted.gpg

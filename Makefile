@@ -65,9 +65,9 @@ $(SOURCES_LIST):
 
 install-repository.sh: build $(SOURCES_LIST)
 	./tools/generate-install-repository.sh >install-repository.sh
+	sha256sum install-repository.sh >install-repository.sh.sha256
 
 sign-install-repository.sh: install-repository.sh
-	sha256sum install-repository.sh >install-repository.sh.sha256
 	gpg -a --detach-sign install-repository.sh.sha256
 
 install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh

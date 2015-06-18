@@ -1,0 +1,4 @@
+/usr/share/keyrings/debian-archive-keyring.gpg /etc/digabi-repository/trusted.gpg.d/debian-archive-keyring.gpg
+/usr/share/keyrings/digabi-archive-keyring.gpg /etc/digabi-repository/trusted.gpg.d/digabi-archive-keyring.gpg
+/etc/nginx/sites-available/digabi-repository-server /etc/nginx/sites-enabled/digabi-repository-server
+

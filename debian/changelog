@@ -1,3 +1,9 @@
+digabi-repository (3.3.1) unstable; urgency=medium
+
+  * Include missing script to d-r-s package.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Thu, 18 Jun 2015 13:39:49 +0300
+
 digabi-repository (3.3.0) unstable; urgency=medium
 
   * Add sudoers config: allow all users in digabi-repository group to manage repository.

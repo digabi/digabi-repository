@@ -4,6 +4,7 @@ etc/nginx/sites-available
 etc/sudoers.d
 usr/bin/digabi-repository-management
 usr/lib/digabi-repository/digabi-sources-list
+usr/lib/digabi-repository/repository-management.sh
 usr/share/digabi-repository/install-repository.sh
 usr/share/digabi-repository/install-repository.sh.sha256
 usr/share/digabi-repository/install-repository.sh.sha256.asc

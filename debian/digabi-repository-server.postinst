@@ -24,7 +24,7 @@ case "$1" in
 
 	su digabi-repository -c "gpg --import /etc/digabi-repository/trusted.gpg.d/*.gpg"
 
-	if [ -f /etc/nginx/sites-available/digabi-repository-server ]
+	if [[ -f /etc/nginx/sites-available/digabi-repository-server && ! -e /etc/nginx/sites-enabled/digabi-repository-server ]]
 	then
 	    ln -s /etc/nginx/sites-available/digabi-repository-server /etc/nginx/sites-enabled/digabi-repository-server
 	fi

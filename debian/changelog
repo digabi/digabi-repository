@@ -1,3 +1,9 @@
+digabi-repository (3.2.6) unstable; urgency=medium
+
+  * Check that nginx configuration doesn't exist before symlinking.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Thu, 18 Jun 2015 08:41:12 +0300
+
 digabi-repository (3.2.5) unstable; urgency=medium
 
   * Add new document root for repository server.

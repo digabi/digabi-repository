@@ -98,7 +98,7 @@ install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh
 	install -D -m 0755 tools/management.sh $(DESTDIR)/usr/bin/digabi-repository-management
 	install -D -m 0755 tools/generate-sources-list.sh $(DESTDIR)/usr/lib/digabi-repository/digabi-sources-list
 	install -d -m 0755 $(DESTDIR)/var/log/digabi-repository
-	install -D -m 0644 digabi-repository-server.logrotate $(DESTDIR)/etc/logrotate.d/digabi-repository-server
+	install -D -m 0644 conf/digabi-repository-server.logrotate $(DESTDIR)/etc/logrotate.d/digabi-repository-server
 	
 	install -D -m 0644 conf/nginx.conf $(DESTDIR)/etc/nginx/sites-available/digabi-repository-server
 	install -D -m 0644 index.html $(DESTDIR)/usr/share/digabi-repository/www/index.html;

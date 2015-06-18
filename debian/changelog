@@ -1,8 +1,14 @@
-digabi-repository (3.2.7) UNRELEASED; urgency=medium
+digabi-repository (3.2.8) unstable; urgency=medium
+
+  * Add missing ca-certificates to Depends of digabi-certificates.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Thu, 18 Jun 2015 12:57:07 +0300
+
+digabi-repository (3.2.7) unstable; urgency=medium
 
   * Create symlinks in .links, instead of .postinst.
 
- -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Thu, 18 Jun 2015 09:51:17 +0300
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Thu, 18 Jun 2015 12:56:49 +0300
 
 digabi-repository (3.2.6) unstable; urgency=medium
 

@@ -18,7 +18,7 @@ Description: Installs Digabi APT repository.
  This package installs Digabi APT repository to your system.
 
 Package: digabi-certificates
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ca-certificates
 Priority: important
 Architecture: all
 Description: Install Digabi certificates into the system.

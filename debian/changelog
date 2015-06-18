@@ -1,3 +1,9 @@
+digabi-repository (3.3.2) unstable; urgency=medium
+
+  * Pass command line parameters to script.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Thu, 18 Jun 2015 13:42:40 +0300
+
 digabi-repository (3.3.1) unstable; urgency=medium
 
   * Include missing script to d-r-s package.

@@ -84,7 +84,7 @@ install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh
 	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)
 	
 	# digabi-certificates
-	install -D -m 0644 data/$(ROOT_CA) $(DESTDIR)/$(LOCALCERTSDIR)/$(ROOT_CA)
+	install -D -m 0644 other-keys/$(ROOT_CA) $(DESTDIR)/$(LOCALCERTSDIR)/$(ROOT_CA)
 	
 	# digabi-repository-server
 	install -D -m 0644 conf/options $(DESTDIR)/etc/digabi-repository/options

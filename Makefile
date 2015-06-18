@@ -96,6 +96,7 @@ install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh
 	install -D -m 0644 other-keys/geogebra.asc $(DESTDIR)/etc/digabi-repository/trusted.gpg.d/geogebra.gpg
 	install -d -m 0755 $(DESTDIR)/etc/digabi-repository/packages
 	install -D -m 0644 conf/packages/* $(DESTDIR)/etc/digabi-repository/packages
+	install -D -m 0600 conf/sudoers $(DESTDIR)/etc/sudoers.d/digabi-repository
 	
 	install -D -m 0755 tools/management-wrapper.sh $(DESTDIR)/usr/bin/digabi-repository-management
 	install -D -m 0755 tools/management.sh $(DESTDIR)/usr/lib/digabi-repository/repository-management.sh

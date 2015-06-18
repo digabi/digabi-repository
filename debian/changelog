@@ -1,3 +1,9 @@
+digabi-repository (3.3.0) unstable; urgency=medium
+
+  * Add sudoers config: allow all users in digabi-repository group to manage repository.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Thu, 18 Jun 2015 13:37:20 +0300
+
 digabi-repository (3.2.9) unstable; urgency=medium
 
   * Add separate wrapper for running management commands.

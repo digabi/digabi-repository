@@ -1,3 +1,9 @@
+digabi-repository (3.2.9) unstable; urgency=medium
+
+  * Add separate wrapper for running management commands.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Thu, 18 Jun 2015 13:32:22 +0300
+
 digabi-repository (3.2.8) unstable; urgency=medium
 
   * Add missing ca-certificates to Depends of digabi-certificates.

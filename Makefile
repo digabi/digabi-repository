@@ -97,7 +97,8 @@ install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh
 	install -d -m 0755 $(DESTDIR)/etc/digabi-repository/packages
 	install -D -m 0644 conf/packages/* $(DESTDIR)/etc/digabi-repository/packages
 	
-	install -D -m 0755 tools/management.sh $(DESTDIR)/usr/bin/digabi-repository-management
+	install -D -m 0755 tools/management-wrapper.sh $(DESTDIR)/usr/bin/digabi-repository-management
+	install -D -m 0755 tools/management.sh $(DESTDIR)/usr/lib/digabi-repository/repository-management.sh
 	install -D -m 0755 tools/generate-sources-list.sh $(DESTDIR)/usr/lib/digabi-repository/digabi-sources-list
 	install -d -m 0755 $(DESTDIR)/var/log/digabi-repository
 	install -D -m 0644 conf/digabi-repository-server.logrotate $(DESTDIR)/etc/logrotate.d/digabi-repository-server

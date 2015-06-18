@@ -52,10 +52,11 @@ clean:
 	rm -rf $(TMPRING) trusted.gpg trustdb.gpg
 	rm -f keyrings/*.cache
 	rm -f install-repository.sh install-repository.sh.sha256
-	rm -f *.gpg *.asc *.list
+	rm -f $(NAME).gpg $(NAME).asc $(NAME).list
 
 purge: clean
 	rm -rf trusted.gpg
+	rm -f install-repository.sh.sha256.asc
 
 $(APT_KEY): keyrings/$(NAME)-archive-keyring.gpg
 	gpg -a --keyring=keyrings/$(NAME)-archive-keyring.gpg --no-default-keyring --export >$(APT_KEY)

@@ -12,7 +12,7 @@ echo ""
 echo ""
 
 echo "cat > /etc/apt/trusted.gpg.d/digabi.gpg << EOF"
-gpg -a --keyring=keyrings/digabi-archive-keyring.gpg --no-default-keyring --export 2>/dev/null
+gpg --keyring=keyrings/digabi-archive-keyring.gpg --no-default-keyring --export 2>/dev/null
 echo "EOF"
 
 echo "cat > /etc/apt/sources.list.d/digabi.list << EOF"

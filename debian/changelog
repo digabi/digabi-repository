@@ -1,3 +1,9 @@
+digabi-repository (3.3.3) unstable; urgency=medium
+
+  * Bump version.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Mon, 22 Jun 2015 14:30:15 +0300
+
 digabi-repository (3.3.2) unstable; urgency=medium
 
   * Pass command line parameters to script.

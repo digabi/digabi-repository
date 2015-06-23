@@ -73,7 +73,7 @@ sign-install-repository.sh: install-repository.sh
 
 install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh
 	# digabi-archive
-	install -D -m 0644 digabi.list $(DESTDIR)/etc/apt/sources.list.d/digabi.list
+	install -D -m 0644 digabi.list $(DESTDIR)/etc/apt/sources.list.d/digabi-archive.list
 	
 	# digabi-archive-keyring
 	install -d $(DESTDIR)/usr/share/keyrings/
@@ -81,9 +81,6 @@ install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh
 	cp keyrings/$(NAME)-archive-removed-keys.gpg $(DESTDIR)/usr/share/keyrings/
 	install -d $(DESTDIR)/etc/apt/trusted.gpg.d/
 	cp $(shell find trusted.gpg/ -name '*.gpg' -type f) $(DESTDIR)/etc/apt/trusted.gpg.d/
-	
-	# digabi-repository
-	install -D -m 0644 $(SOURCES_LIST) $(DESTDIR)/etc/apt/sources.list.d/$(SOURCES_LIST)
 	
 	# digabi-certificates
 	install -D -m 0644 other-keys/$(ROOT_CA) $(DESTDIR)/$(LOCALCERTSDIR)/$(ROOT_CA)

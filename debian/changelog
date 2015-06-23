@@ -1,3 +1,22 @@
+digabi-repository (3.3.6) unstable; urgency=medium
+
+  * Drop installation of digabi.list.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Tue, 23 Jun 2015 12:51:03 +0300
+
+digabi-repository (3.3.5) unstable; urgency=medium
+
+  * Bump version.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Tue, 23 Jun 2015 12:41:40 +0300
+
+digabi-repository (3.3.4) unstable; urgency=medium
+
+  * Update install path of sources.list to sources.list.d/
+    digabi-archive.list.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Tue, 23 Jun 2015 10:59:06 +0300
+
 digabi-repository (3.3.3) unstable; urgency=medium
 
   * Bump version.

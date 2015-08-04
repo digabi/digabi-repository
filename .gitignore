@@ -6,4 +6,3 @@ trustdb.gpg
 trusted.gpg
 install-repository.sh
 install-repository.sh.sha256
-install-repository.sh.sha256.asc

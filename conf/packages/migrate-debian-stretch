@@ -2,6 +2,7 @@ libxfce4ui-1-0					install
 libxfce4ui-common				install
 libxfce4ui-utils				install
 libxfce4util7					install
+libxfce4util-bin				install
 libxfce4util-common				install
 libxfconf-0-2					install
 xfce4						install

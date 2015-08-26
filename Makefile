@@ -73,7 +73,7 @@ sign-install-repository.sh: install-repository.sh
 
 install: build $(SOURCES_LIST) $(APT_KEY) install-repository.sh
 	# digabi-archive
-	install -D -m 0644 digabi.list $(DESTDIR)/etc/apt/sources.list.d/digabi-archive.list
+	install -D -m 0644 digabi.list $(DESTDIR)/usr/share/digabi-archive/sources.list
 	
 	# digabi-archive-keyring
 	install -d $(DESTDIR)/usr/share/keyrings/

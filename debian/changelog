@@ -1,3 +1,9 @@
+digabi-repository (3.3.7) unstable; urgency=medium
+
+  * Install sources.list to /usr/share/digabi-archive.
+
+ -- Ville Korhonen <ville.korhonen@ylioppilastutkinto.fi>  Wed, 26 Aug 2015 12:44:03 +0300
+
 digabi-repository (3.3.6) unstable; urgency=medium
 
   * Drop installation of digabi.list.

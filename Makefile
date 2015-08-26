@@ -3,7 +3,7 @@ RELEASE ?= stable
 BASE_URL ?= http://dev.digabi.fi/debian
 
 ROOT_CA = ytl-root-ca.crt
-LOCALCERTSDIR = /usr/local/share/ca-certificates
+LOCALCERTSDIR = /usr/share/ca-certificates/digabi
 SOURCES_LIST = $(NAME).list
 APT_KEY = $(NAME).asc
 

@@ -1,0 +1,83 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            da:8d:0e:30:ca:a0:3c:2e
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=Ylioppilastutkintoverkko / Root CA
+        Validity
+            Not Before: Jan  1 12:00:14 1970 GMT
+            Not After : Jul  8 12:00:14 2079 GMT
+        Subject: CN=Ylioppilastutkintoverkko / Root CA
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:a1:a7:6a:38:7b:65:6e:67:0c:8a:1a:9a:c7:d3:
+                    fe:9f:5c:48:96:75:e0:2d:85:a6:b5:d0:e1:bf:92:
+                    c7:a9:e5:fa:8f:5e:82:8b:80:0d:8a:2a:60:7b:bb:
+                    90:8d:18:4d:fd:6c:27:6f:47:e2:08:72:d3:02:9f:
+                    42:2f:61:e2:bd:2b:4d:09:b2:d3:21:b3:79:5d:5c:
+                    89:af:b7:27:1b:9e:14:53:e9:6c:9e:d1:be:ae:88:
+                    a6:85:9f:6f:49:32:74:5f:53:a0:13:de:0c:a0:d2:
+                    2b:94:91:c1:84:99:0d:01:43:40:e5:9f:33:0a:39:
+                    24:46:05:89:9f:4e:d9:d2:63:50:6f:bf:80:2a:95:
+                    5b:cb:93:ae:c1:cd:c5:6d:56:73:f8:17:e6:ac:67:
+                    8d:cd:6d:2c:25:26:3e:c3:c1:c8:9b:41:37:71:2a:
+                    ef:cb:14:b9:be:c1:69:34:2d:eb:17:cb:35:f4:db:
+                    70:17:bb:4c:02:73:d7:a5:92:e3:a1:cb:11:a4:95:
+                    11:32:af:4c:73:b5:ec:de:fc:8d:4d:89:b2:ca:88:
+                    b1:ba:cb:80:f5:1a:b0:15:3a:72:09:31:7b:84:c5:
+                    24:cd:86:ee:e5:8f:4f:0b:96:8d:9b:2c:5b:5c:39:
+                    0a:0d:7b:d6:05:94:28:b8:35:2c:2a:05:53:e3:9b:
+                    0f:37
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                62:BF:AC:72:42:78:A0:7B:15:5B:C1:AD:FE:7E:76:2E:BD:F3:12:A4
+            X509v3 Authority Key Identifier: 
+                keyid:62:BF:AC:72:42:78:A0:7B:15:5B:C1:AD:FE:7E:76:2E:BD:F3:12:A4
+                DirName:/CN=Ylioppilastutkintoverkko / Root CA
+                serial:DA:8D:0E:30:CA:A0:3C:2E
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+    Signature Algorithm: sha256WithRSAEncryption
+         0c:09:dd:ac:f6:38:25:9e:dc:cd:fa:7b:bd:fd:5f:d8:1f:e9:
+         f8:e5:42:99:7c:dd:de:2b:26:2d:c2:98:7a:ad:24:d4:f0:a3:
+         3b:8a:04:44:7d:a7:1f:03:cb:a5:93:1d:0c:48:af:34:98:72:
+         3e:67:5f:6c:d9:79:33:2d:ca:d7:df:9f:4b:77:8f:e9:85:8c:
+         15:8e:33:03:ef:06:43:08:31:aa:89:8b:31:d4:a7:89:c4:68:
+         d7:4a:54:5b:c6:6f:01:bf:35:77:4e:a7:e2:10:78:c9:3b:13:
+         00:b6:b2:ff:d5:9c:e4:18:04:37:31:df:13:1d:5c:1d:ff:c6:
+         d6:ca:c0:28:44:81:e5:28:05:02:89:03:f5:45:3d:ab:10:d6:
+         4a:c0:66:71:c0:f2:b4:be:3e:89:6e:7d:fb:08:37:f6:7a:27:
+         31:52:cd:e3:ca:b4:ad:fc:00:75:74:49:55:8b:81:49:93:13:
+         e2:8b:77:35:eb:6b:88:9b:e1:f4:b5:7c:31:0a:83:fe:88:d5:
+         03:b6:f7:26:2f:55:d8:21:3c:9d:9d:e0:e8:4a:e0:09:34:56:
+         56:fd:28:5a:bf:ee:42:de:42:20:4b:9e:44:2b:77:d9:53:89:
+         b6:8b:0d:1c:ef:08:af:ea:e4:0f:bd:20:72:bc:25:7c:44:8e:
+         f8:57:1e:e0
+-----BEGIN CERTIFICATE-----
+MIIDfDCCAmSgAwIBAgIJANqNDjDKoDwuMA0GCSqGSIb3DQEBCwUAMC0xKzApBgNV
+BAMMIllsaW9wcGlsYXN0dXRraW50b3ZlcmtrbyAvIFJvb3QgQ0EwIBcNNzAwMTAx
+MTIwMDE0WhgPMjA3OTA3MDgxMjAwMTRaMC0xKzApBgNVBAMMIllsaW9wcGlsYXN0
+dXRraW50b3ZlcmtrbyAvIFJvb3QgQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQChp2o4e2VuZwyKGprH0/6fXEiWdeAthaa10OG/ksep5fqPXoKLgA2K
+KmB7u5CNGE39bCdvR+IIctMCn0IvYeK9K00JstMhs3ldXImvtycbnhRT6Wye0b6u
+iKaFn29JMnRfU6AT3gyg0iuUkcGEmQ0BQ0DlnzMKOSRGBYmfTtnSY1Bvv4AqlVvL
+k67BzcVtVnP4F+asZ43NbSwlJj7DwcibQTdxKu/LFLm+wWk0LesXyzX023AXu0wC
+c9elkuOhyxGklREyr0xzteze/I1NibLKiLG6y4D1GrAVOnIJMXuExSTNhu7lj08L
+lo2bLFtcOQoNe9YFlCi4NSwqBVPjmw83AgMBAAGjgZwwgZkwHQYDVR0OBBYEFGK/
+rHJCeKB7FVvBrf5+di698xKkMF0GA1UdIwRWMFSAFGK/rHJCeKB7FVvBrf5+di69
+8xKkoTGkLzAtMSswKQYDVQQDDCJZbGlvcHBpbGFzdHV0a2ludG92ZXJra28gLyBS
+b290IENBggkA2o0OMMqgPC4wDAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCAQYwDQYJ
+KoZIhvcNAQELBQADggEBAAwJ3az2OCWe3M36e739X9gf6fjlQpl83d4rJi3CmHqt
+JNTwozuKBER9px8Dy6WTHQxIrzSYcj5nX2zZeTMtytffn0t3j+mFjBWOMwPvBkMI
+MaqJizHUp4nEaNdKVFvGbwG/NXdOp+IQeMk7EwC2sv/VnOQYBDcx3xMdXB3/xtbK
+wChEgeUoBQKJA/VFPasQ1krAZnHA8rS+PoluffsIN/Z6JzFSzePKtK38AHV0SVWL
+gUmTE+KLdzXra4ib4fS1fDEKg/6I1QO29yYvVdghPJ2d4OhK4Ak0Vlb9KFq/7kLe
+QiBLnkQrd9lTibaLDRzvCK/q5A+9IHK8JXxEjvhXHuA=
+-----END CERTIFICATE-----

@@ -4,6 +4,7 @@ set -e
 
 case "$1" in
     configure)
+        echo "digabi/ytl-net-root-ca.crt" >> /etc/ca-certificates.conf
         update-ca-certificates
         ;;
     *)

@@ -1,3 +1,9 @@
+digabi-repository (3.3.9) unstable; urgency=medium
+
+  * Bump version for new CI
+
+ -- Timo Metsala <timo.metsala@reaktor.com>  Fri, 26 Apr 2019 13:51:03 +0300
+
 digabi-repository (3.3.8) unstable; urgency=medium
 
   * Install root certificate to

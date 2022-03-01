@@ -1,1 +1,0 @@
-%digabi-repository	ALL=(digabi-repository)		NOPASSWD: /usr/lib/digabi-repository/repository-management.sh

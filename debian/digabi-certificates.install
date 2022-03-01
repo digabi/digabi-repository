@@ -1,2 +1,1 @@
-usr/share/ca-certificates
-
+other-keys/ytl-net-root-ca.crt usr/share/ca-certificates/digabi

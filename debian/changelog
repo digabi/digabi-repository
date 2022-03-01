@@ -1,3 +1,9 @@
+digabi-repository (4.0.0) unstable; urgency=medium
+
+  * Remove all legacy stuff - we only use digabi-certificates package
+
+ -- Visa de Bruijn <visa.de.bruijn@reaktor.com>  Tue, 1 Mar 2022 15:44:00 +0300
+
 digabi-repository (3.3.9) unstable; urgency=medium
 
   * Bump version for new CI

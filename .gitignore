@@ -1,8 +1,2 @@
 *~
 *.swp
-digabi.list
-digabi.gpg
-trustdb.gpg
-trusted.gpg
-install-repository.sh
-install-repository.sh.sha256
